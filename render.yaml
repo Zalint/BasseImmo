@@ -1,0 +1,43 @@
+# Déploiement Render — site statique, aucune compilation.
+# Render → New → Blueprint, puis pointer sur ce dépôt.
+services:
+  - type: web
+    name: basseimmo
+    runtime: static
+    branch: claude/senegal-website-keuryi-style-jak2rk
+    buildCommand: echo "Site statique, rien a compiler"
+    staticPublishPath: ./
+    pullRequestPreviewsEnabled: true
+
+    headers:
+      # Le HTML est revalidé à chaque visite : une correction est visible tout de suite.
+      - path: /*.html
+        name: Cache-Control
+        value: public, max-age=0, must-revalidate
+
+      # Le CSS et le JS changent à chaque retouche : cache court.
+      - path: /assets/css/*
+        name: Cache-Control
+        value: public, max-age=3600
+      - path: /assets/js/*
+        name: Cache-Control
+        value: public, max-age=3600
+
+      # Les dessins et l'image de partage bougent rarement.
+      - path: /assets/img/*
+        name: Cache-Control
+        value: public, max-age=604800
+
+      # En-têtes de sécurité, sans effet sur le rendu.
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /*
+        name: Permissions-Policy
+        value: camera=(), microphone=(), geolocation=(), interest-cohort=()

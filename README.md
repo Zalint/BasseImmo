@@ -23,11 +23,83 @@ npx http-server -p 8080 -c-1
 Ouvrir directement `index.html` avec le navigateur fonctionne aussi, mais un
 serveur local reste plus fidèle au comportement réel.
 
-## Mettre en ligne
+## Mettre en ligne sur Render
 
-Le dépôt est prêt pour GitHub Pages (le fichier `.nojekyll` est présent),
-Netlify, Vercel, ou n'importe quel hébergement mutualisé : il suffit de déposer
-le contenu du dossier à la racine du site.
+Le dépôt contient un `render.yaml` prêt à l'emploi. `index.html` est à la racine,
+et rien n'a besoin d'être compilé.
+
+**Par Blueprint, le plus simple.** Sur Render : *New* → *Blueprint*, choisir ce
+dépôt. Render lit `render.yaml` et crée le site avec les bons réglages.
+
+**À la main, si vous préférez.** *New* → *Static Site*, choisir le dépôt, puis :
+
+| Réglage | Valeur |
+|---|---|
+| Branch | `claude/senegal-website-keuryi-style-jak2rk` (c'est la branche par défaut du dépôt) |
+| Build Command | laisser vide |
+| Publish Directory | `.` |
+
+Le HTTPS et le certificat sont automatiques. Chaque push sur la branche
+redéploie le site.
+
+### Après le premier déploiement
+
+**1. Corriger le domaine.** Les liens canoniques, les balises Open Graph, le
+sitemap et `robots.txt` pointent vers `https://basseimmo.sn`. Tant que le site
+vit sur une adresse `.onrender.com`, ces liens désignent un domaine qui
+n'existe pas, ce qui gêne l'indexation. Un script s'en charge :
+
+```bash
+./tools/domaine.sh https://basseimmo.onrender.com   # adresse Render
+./tools/domaine.sh https://basseimmo.sn             # le jour où le domaine est branché
+```
+
+Puis committer et pousser. À refaire une seule fois, quand vous branchez le
+vrai domaine.
+
+**2. Vérifier la page 404.** Render sert `404.html` depuis la racine du dossier
+publié. Ouvrez une adresse inexistante (`/nimportequoi`) et vérifiez que la page
+d'erreur du site s'affiche bien. Si ce n'est pas le cas, le réglage se trouve
+dans *Settings* → *Redirects and Rewrites*.
+
+**3. Brancher le domaine.** *Settings* → *Custom Domains*, ajouter
+`basseimmo.sn` et `www.basseimmo.sn`, puis créer chez votre registrar les
+enregistrements DNS que Render affiche.
+
+### Autres hébergeurs
+
+Le dépôt fonctionne tel quel sur GitHub Pages (le fichier `.nojekyll` est déjà
+présent), Netlify, Vercel ou n'importe quel hébergement mutualisé : il suffit de
+déposer le contenu du dossier à la racine du site.
+
+### Renforcer la sécurité, en option
+
+`render.yaml` pose déjà `X-Content-Type-Options`, `Referrer-Policy`,
+`X-Frame-Options` et `Permissions-Policy`. Vous pouvez ajouter une politique de
+sécurité de contenu :
+
+```yaml
+      - path: /*
+        name: Content-Security-Policy
+        value: >-
+          default-src 'self';
+          script-src 'self' 'sha256-gx85Z8Eh0ZdE7GdffsWVnKflge+TEaybGk/mIPaTq34=';
+          style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+          font-src https://fonts.gstatic.com;
+          img-src 'self' data:;
+          base-uri 'self'; form-action 'self'; frame-ancestors 'self'
+```
+
+Le haché correspond au petit script en ligne présent dans chaque page, celui qui
+applique le thème enregistré avant le premier rendu. **Si vous modifiez ce
+script, le haché change** et le thème se remettra à clignoter au chargement.
+Dans ce cas, recalculez-le :
+
+```bash
+python3 -c "import re,hashlib,base64,io; \
+c=re.search(r'<script>\n(.*?)\n</script>', io.open('index.html',encoding='utf-8').read(), re.S).group(1); \
+print('sha256-'+base64.b64encode(hashlib.sha256(c.encode()).digest()).decode())"
+```
 
 ---
 
@@ -68,6 +140,9 @@ article.html?id=…     un article du guide
 a-propos.html         présentation de l'entreprise
 contact.html          formulaire et coordonnées
 404.html              page d'erreur
+
+render.yaml           configuration de déploiement Render
+tools/domaine.sh      change le domaine dans les liens canoniques et le sitemap
 
 assets/css/style.css  design system complet (jetons, composants, thème sombre)
 assets/img/plans/     plans du rez-de-chaussée des 12 modèles (SVG)
