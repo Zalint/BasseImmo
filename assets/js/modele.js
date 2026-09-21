@@ -26,14 +26,6 @@
     'Le mobilier et la décoration'
   ];
 
-  function specLigne(icone, label, valeur) {
-    return '<div style="display:flex;align-items:center;gap:.7rem;padding:.7rem 0;border-bottom:1px dashed var(--border)">' +
-      '<span style="color:var(--accent);display:flex">' + BI.icone(icone) + '</span>' +
-      '<span style="color:var(--text-soft);font-size:.9rem">' + label + '</span>' +
-      '<strong style="margin-left:auto;font-size:.95rem">' + valeur + '</strong>' +
-    '</div>';
-  }
-
   function introuvable() {
     $('#fiche').innerHTML =
       '<section class="page-head"><div class="container">' +
@@ -52,8 +44,21 @@
     var meta = document.querySelector('meta[name="description"]');
     if (meta) meta.setAttribute('content', m.accroche + ' ' + m.surface + ' m², ' + m.niveaux + ', budget ' + BI.fourchette(b.min, b.max) + '.');
 
+    var ligne = function (dt, dd) {
+      return '<div><dt>' + dt + '</dt><dd>' + dd + '</dd></div>';
+    };
+
+    var specs = ligne('Surface habitable', m.surface + ' m²') +
+                ligne('Niveaux', BI.escape(m.niveaux)) +
+                (m.chambres ? ligne('Chambres', m.chambres) : '') +
+                (m.sdb ? ligne('Salles d\'eau', m.sdb) : '') +
+                ligne('Parcelle minimale', m.parcelle + ' m²') +
+                ligne('Durée du chantier', b.duree + ' mois') +
+                ligne('Finition', BI.escape(finition.nom)) +
+                ligne('Usage', usageLabel);
+
     var atouts = m.atouts.map(function (a) {
-      return '<li>' + BI.icone('check-circle') + ' ' + BI.escape(a) + '</li>';
+      return '<li>' + BI.icone('check') + ' ' + BI.escape(a) + '</li>';
     }).join('');
 
     var pieces = m.pieces.map(function (p) {
@@ -61,30 +66,25 @@
     }).join('');
 
     var echeancier = BI.echeancier.map(function (e, i) {
-      var montant = e.part * ((b.min + b.max) / 2);
       return '<div class="sched-row">' +
-        '<span class="sched-row__dot">' + (i + 1) + '</span>' +
+        '<span class="sched-row__dot">' + ('0' + (i + 1)).slice(-2) + '</span>' +
         '<span>' + BI.escape(e.etape) + '<small>' + Math.round(e.part * 100) + ' % du marché</small></span>' +
-        '<strong>' + BI.fcfaCourt(montant) + '</strong>' +
+        '<strong>' + BI.fcfaCourt(e.part * ((b.min + b.max) / 2)) + '</strong>' +
       '</div>';
     }).join('');
 
     var blocLocatif = '';
     if (m.locatif > 0) {
-      var annuel = m.locatif * 12;
-      var rendement = (annuel / ((b.min + b.max) / 2) * 100);
-      blocLocatif =
-        '<div class="callout callout--leaf" style="margin-top:2rem">' + BI.icone('trending-up') +
-          '<p><strong>Ce modèle produit un revenu.</strong> Environ ' + BI.fcfa(m.locatif) + ' de loyer par mois, soit ' +
-          BI.fcfaCourt(annuel) + ' par an, ce qui représente un rendement brut de l\'ordre de ' +
-          rendement.toFixed(1).replace('.', ',') + ' % sur le coût de construction. Loyers observés à Dakar et en proche banlieue, hors charges et hors vacance locative.</p>' +
-        '</div>';
+      var rendement = (m.locatif * 12 / ((b.min + b.max) / 2) * 100);
+      blocLocatif = '<div class="note" style="margin-top:2.5rem">' + BI.icone('trending-up') +
+        '<p><strong>Ce modèle produit un revenu.</strong> Environ ' + BI.fcfa(m.locatif) + ' de loyer par mois, soit ' +
+        BI.fcfaCourt(m.locatif * 12) + ' par an, ce qui représente un rendement brut de l\'ordre de ' +
+        rendement.toFixed(1).replace('.', ',') + ' % sur le coût de construction. Loyers observés à Dakar et en proche banlieue, hors charges et hors vacance locative.</p></div>';
     }
 
     var similaires = BI.modeles.filter(function (x) {
       if (x.id === m.id) return false;
-      var bx = BI.budgetModele(x);
-      return Math.abs(bx.min - b.min) < 45e6;
+      return Math.abs(BI.budgetModele(x).min - b.min) < 45e6;
     }).slice(0, 3);
 
     $('#fiche').innerHTML =
@@ -95,124 +95,119 @@
           '<li><a href="modeles.html">Modèles</a></li>' +
           '<li aria-current="page">' + BI.escape(m.nom) + '</li>' +
         '</ol>' +
-        '<p class="eyebrow">' + BI.escape(m.sousTitre) + '</p>' +
-        '<h1>Modèle ' + BI.escape(m.nom) + '</h1>' +
+        '<p class="label label--accent" style="margin-bottom:1rem">' + BI.escape(m.sousTitre) + '</p>' +
+        '<h1>' + BI.escape(m.nom) + '</h1>' +
         '<p>' + BI.escape(m.accroche) + '</p>' +
       '</div>' +
     '</section>' +
 
     '<section class="section section--tight">' +
       '<div class="container">' +
-        '<div class="grid" style="grid-template-columns:1fr;gap:28px" id="fiche-grille">' +
-
-          '<div>' +
-            '<img src="assets/img/modeles/' + m.id + '.svg" width="800" height="600" alt="Illustration du modèle ' + BI.escape(m.nom) + '"' +
-              ' style="width:100%;border-radius:var(--r-lg);border:1px solid var(--border);box-shadow:var(--shadow-md)">' +
-
-            '<div class="prose" style="margin-top:2rem;max-width:none">' +
-              '<h2>Le projet</h2>' +
-              '<p>' + BI.escape(m.description) + '</p>' +
-
-              '<h3>Ce qui fait la différence</h3>' +
-              '<ul class="checklist">' + atouts + '</ul>' +
-
-              '<h3>Les pièces</h3>' +
-              '<ul class="checklist" style="gap:.4rem">' + pieces + '</ul>' +
-            '</div>' +
-
-            blocLocatif +
-
-            '<div class="grid grid--2" style="margin-top:2rem">' +
-              '<div class="card">' +
-                '<h3 style="font-size:1.05rem;display:flex;align-items:center;gap:.5rem">' +
-                  '<span style="color:var(--leaf-500);display:flex">' + BI.icone('check-circle') + '</span> Compris dans le prix</h3>' +
-                '<ul class="checklist" style="margin-top:.8rem;font-size:.9rem">' +
-                  COMPRIS.map(function (c) { return '<li>' + BI.icone('check') + ' ' + c + '</li>'; }).join('') +
-                '</ul>' +
-              '</div>' +
-              '<div class="card">' +
-                '<h3 style="font-size:1.05rem;display:flex;align-items:center;gap:.5rem">' +
-                  '<span style="color:var(--brick-500);display:flex">' + BI.icone('info') + '</span> À prévoir en plus</h3>' +
-                '<ul class="checklist" style="margin-top:.8rem;font-size:.9rem">' +
-                  NON_COMPRIS.map(function (c) {
-                    return '<li><span style="color:var(--text-mute);display:flex">' + BI.icone('plus') + '</span> ' + c + '</li>';
-                  }).join('') +
-                '</ul>' +
-                '<p style="font-size:.85rem;color:var(--text-mute);margin-top:1rem">Le simulateur chiffre chacun de ces postes.</p>' +
-              '</div>' +
-            '</div>' +
-
-            '<div class="card" style="margin-top:2rem">' +
-              '<h3 style="font-size:1.1rem;display:flex;align-items:center;gap:.5rem">' +
-                '<span style="color:var(--accent);display:flex">' + BI.icone('calendar') + '</span> Échéancier de paiement</h3>' +
-              '<p style="font-size:.9rem;color:var(--text-soft);margin-top:.4rem">Calculé sur le milieu de la fourchette. Chaque tranche n\'est appelée qu\'après constat d\'avancement.</p>' +
-              '<div class="schedule" style="margin-top:1rem">' + echeancier + '</div>' +
-            '</div>' +
+        '<div class="grid12">' +
+          '<div class="c8">' +
+            '<figure class="figure" style="margin:0">' +
+              '<img src="assets/img/axo/' + m.id + '.svg" width="900" height="700" alt="Axonométrie du modèle ' + BI.escape(m.nom) + '">' +
+              '<figcaption>Axonométrie · ' + BI.escape(m.niveaux) + ' · ' + m.surface + ' m² habitables</figcaption>' +
+            '</figure>' +
           '</div>' +
-
-          '<aside>' +
-            '<div class="card" id="carte-budget" style="position:sticky;top:calc(var(--header-h) + 16px)">' +
-              '<p class="eyebrow" style="margin-bottom:.4rem">Budget construction</p>' +
-              '<p style="font-family:var(--font-display);font-size:1.75rem;font-weight:700;line-height:1.1;color:var(--accent);margin-bottom:.2rem">' +
-                BI.fourchette(b.min, b.max) + '</p>' +
-              '<p style="font-size:.84rem;color:var(--text-mute);margin-bottom:1.2rem">Hors terrain · ' +
-                BI.fmt(Math.round(b.min / m.surface / 1000) * 1000) + ' à ' + BI.fmt(Math.round(b.max / m.surface / 1000) * 1000) + ' FCFA le m²</p>' +
-              '<div class="sim__fx" style="margin-bottom:1.2rem">' +
+          '<aside class="c4">' +
+            '<div style="position:sticky;top:calc(var(--header-h) + 20px)">' +
+              '<p class="label" style="margin-bottom:.6rem">Budget construction</p>' +
+              '<p class="bigprice">' + BI.fourchette(b.min, b.max) + '</p>' +
+              '<p class="mono" style="font-size:.74rem;color:var(--ink-mute);margin:.6rem 0 1rem;letter-spacing:.04em">' +
+                'HORS TERRAIN · ' + BI.fmt(Math.round(b.min / m.surface / 1000) * 1000) + ' À ' +
+                BI.fmt(Math.round(b.max / m.surface / 1000) * 1000) + ' FCFA/M²</p>' +
+              '<div class="sim__fx" style="margin-bottom:1.6rem">' +
                 ['EUR', 'USD'].map(function (d) {
-                  return '<span class="badge">≈ ' + BI.enDevise(b.min, d) + ' – ' + BI.enDevise(b.max, d) + '</span>';
+                  return '<span class="tag">' + BI.enDevise(b.min, d) + ' – ' + BI.enDevise(b.max, d) + '</span>';
                 }).join('') +
               '</div>' +
-              specLigne('maximize', 'Surface habitable', m.surface + ' m²') +
-              specLigne('layers', 'Niveaux', BI.escape(m.niveaux)) +
-              (m.chambres ? specLigne('bed', 'Chambres', m.chambres) : '') +
-              (m.sdb ? specLigne('bath', 'Salles d\'eau', m.sdb) : '') +
-              specLigne('map-pin', 'Parcelle minimale', m.parcelle + ' m²') +
-              specLigne('clock', 'Durée du chantier', b.duree + ' mois') +
-              specLigne('sparkles', 'Finition', BI.escape(finition.nom)) +
-              specLigne('target', 'Usage', usageLabel) +
-              '<div class="stack" style="margin-top:1.4rem">' +
-                '<a class="btn btn--block" href="contact.html?modele=' + m.id + '">' + BI.icone('send') + ' Demander le dossier</a>' +
-                '<a class="btn btn--block btn--wa" data-wa="Bonjour Basse Immo, je suis intéressé par le modèle ' + m.nom + ' (' + m.surface + ' m²). Pouvez-vous m\'envoyer le dossier complet ?" href="#">' + BI.icone('whatsapp') + ' En parler sur WhatsApp</a>' +
-                '<a class="btn btn--block btn--ghost" href="simulateur.html?type=' + m.type + '&surface=' + m.surface + '&finition=' + m.standing + '&parcelle=' + m.parcelle + '">' + BI.icone('calculator') + ' Adapter le budget</a>' +
+              '<dl class="specs">' + specs + '</dl>' +
+              '<div class="stack" style="margin-top:1.6rem">' +
+                '<a class="btn btn--block" href="contact.html?modele=' + m.id + '">Demander le dossier ' + BI.icone('arrow-right') + '</a>' +
+                '<a class="btn btn--wa btn--block" data-wa="Bonjour Basse Immo, je suis intéressé par le modèle ' + m.nom + ' (' + m.surface + ' m²). Pouvez-vous m\'envoyer le dossier complet ?" href="#">' + BI.icone('whatsapp') + ' En parler sur WhatsApp</a>' +
+                '<a class="btn btn--line btn--block" href="simulateur.html?type=' + m.type + '&surface=' + m.surface + '&finition=' + m.standing + '&parcelle=' + m.parcelle + '">Adapter le budget</a>' +
               '</div>' +
-              '<p style="font-size:.8rem;color:var(--text-mute);margin-top:1rem;text-align:center">Estimation indicative. Le devis définitif tient compte de votre parcelle.</p>' +
+              '<p class="mono" style="font-size:.68rem;color:var(--ink-mute);margin-top:1rem;line-height:1.6">Estimation indicative. Le devis définitif tient compte de votre parcelle.</p>' +
             '</div>' +
           '</aside>' +
+        '</div>' +
+      '</div>' +
+    '</section>' +
 
+    '<section class="section section--paper2">' +
+      '<div class="container">' +
+        '<div class="grid12">' +
+          '<div class="c5">' +
+            '<p class="label label--accent" style="margin-bottom:1rem">Le projet</p>' +
+            '<h2 style="font-size:clamp(1.6rem,2.8vw,2.2rem)">' + BI.escape(m.sousTitre) + '</h2>' +
+            '<p style="color:var(--ink-soft)">' + BI.escape(m.description) + '</p>' +
+            '<h3 style="margin-top:2.2rem">Ce qui fait la différence</h3>' +
+            '<ul class="checklist" style="margin-top:1rem">' + atouts + '</ul>' +
+          '</div>' +
+          '<div class="c7">' +
+            '<figure class="figure" style="margin:0">' +
+              '<img src="assets/img/plans/' + m.id + '.svg" width="800" height="600" alt="Plan du rez-de-chaussée du modèle ' + BI.escape(m.nom) + '">' +
+              '<figcaption>Plan du rez-de-chaussée · échelle 1:100</figcaption>' +
+            '</figure>' +
+            '<h3 style="margin-top:2rem">Les pièces</h3>' +
+            '<ul class="checklist" style="margin-top:1rem">' + pieces + '</ul>' +
+          '</div>' +
+        '</div>' +
+        blocLocatif +
+      '</div>' +
+    '</section>' +
+
+    '<section class="section">' +
+      '<div class="container">' +
+        '<div class="split">' +
+          '<div>' +
+            '<p class="label label--accent" style="margin-bottom:.9rem">Compris dans le prix</p>' +
+            '<ul class="checklist">' + COMPRIS.map(function (c) { return '<li>' + BI.icone('check') + ' ' + c + '</li>'; }).join('') + '</ul>' +
+          '</div>' +
+          '<div>' +
+            '<p class="label" style="margin-bottom:.9rem">À prévoir en plus</p>' +
+            '<ul class="checklist">' + NON_COMPRIS.map(function (c) {
+              return '<li><span style="color:var(--ink-mute);display:flex">' + BI.icone('plus') + '</span> ' + c + '</li>';
+            }).join('') + '</ul>' +
+            '<p class="mono" style="font-size:.72rem;color:var(--ink-mute);margin-top:1.2rem;line-height:1.6">Le simulateur chiffre chacun de ces postes.</p>' +
+          '</div>' +
+        '</div>' +
+
+        '<div style="margin-top:3.5rem;border-top:1px solid var(--hair);padding-top:2.2rem">' +
+          '<p class="label label--accent" style="margin-bottom:.9rem">Échéancier</p>' +
+          '<h3 style="max-width:20ch">Comment vous paierez</h3>' +
+          '<p style="color:var(--ink-soft);font-size:.96rem;max-width:58ch">Calculé sur le milieu de la fourchette. Chaque tranche n\'est appelée qu\'après constat d\'avancement sur site.</p>' +
+          '<div style="margin-top:1.4rem;border-top:1px solid var(--hair)">' + echeancier + '</div>' +
         '</div>' +
       '</div>' +
     '</section>' +
 
     (similaires.length ?
-    '<section class="section section--alt">' +
+    '<section class="section section--paper2">' +
       '<div class="container">' +
-        '<div class="section-head"><p class="eyebrow">Dans le même budget</p><h2>Ces modèles aussi</h2></div>' +
-        '<div class="grid grid--3">' + similaires.map(BI.carteModele).join('') + '</div>' +
+        '<div class="shead"><div class="shead__top"><span class="idx">—</span><span class="label">Dans le même budget</span></div>' +
+        '<h2>Ces modèles aussi</h2></div>' +
+        '<div class="plans">' + similaires.map(BI.carteModele).join('') + '</div>' +
       '</div>' +
     '</section>' : '') +
 
-    '<section class="section">' +
+    '<section class="section plate plate--clay">' +
       '<div class="container">' +
-        '<div class="cta-band">' +
-          '<h2>Ce modèle sur votre parcelle</h2>' +
-          '<p>Envoyez-nous les dimensions et l\'adresse de votre terrain. Nous vérifions que le modèle s\'y implante, puis nous l\'adaptons.</p>' +
-          '<div class="cluster cluster--center">' +
-            '<a class="btn btn--lg" href="contact.html?modele=' + m.id + '">' + BI.icone('send') + ' Demander une étude</a>' +
-            '<a class="btn btn--lg btn--wa" data-wa="Bonjour, j\'ai un terrain et je souhaite savoir si le modèle ' + m.nom + ' peut s\'y implanter." href="#">' + BI.icone('whatsapp') + ' WhatsApp</a>' +
+        '<div class="shead shead--split" style="margin-bottom:0">' +
+          '<div class="shead__top"><span class="label">Prochaine étape</span></div>' +
+          '<div><h2>Ce modèle sur votre parcelle</h2></div>' +
+          '<div>' +
+            '<p class="shead__lead" style="margin-bottom:1.8rem">Envoyez-nous les dimensions et l\'adresse de votre terrain. Nous vérifions que le modèle s\'y implante, puis nous l\'adaptons.</p>' +
+            '<div class="row">' +
+              '<a class="btn" href="contact.html?modele=' + m.id + '">Demander une étude ' + BI.icone('arrow-right') + '</a>' +
+              '<a class="btn btn--line" data-wa="Bonjour, j\'ai un terrain et je souhaite savoir si le modèle ' + m.nom + ' peut s\'y implanter." href="#">' + BI.icone('whatsapp') + ' WhatsApp</a>' +
+            '</div>' +
           '</div>' +
         '</div>' +
       '</div>' +
     '</section>';
 
-    // Deux colonnes seulement à partir du grand écran.
-    var grille = $('#fiche-grille');
-    var appliquer = function () {
-      grille.style.gridTemplateColumns = window.innerWidth >= 1000 ? '1.6fr .9fr' : '1fr';
-    };
-    appliquer();
-    window.addEventListener('resize', appliquer);
-
-    // Les liens WhatsApp viennent d'être créés : on les recâble.
     BI.$$('[data-wa]', $('#fiche')).forEach(function (a) {
       a.href = BI.waLink(a.getAttribute('data-wa'));
       a.target = '_blank'; a.rel = 'noopener';

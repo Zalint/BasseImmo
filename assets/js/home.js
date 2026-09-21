@@ -59,15 +59,15 @@
         '</div>' +
       '</div>' +
       '<div class="sim__result" style="position:static">' +
-        '<p class="eyebrow" style="color:var(--clay-300);margin-bottom:.6rem">Budget construction</p>' +
+        '<p class="label" style="margin-bottom:.4rem">Budget construction</p>' +
         '<p class="sim__total" id="ms-total">—</p>' +
         '<p class="sim__total-sub" id="ms-sub"></p>' +
         '<div class="sim__fx" id="ms-fx"></div>' +
         '<div class="sim__note">' + BI.icone('info') +
           '<span>Estimation hors terrain, hors clôture et hors options. Le simulateur complet détaille chaque poste.</span>' +
         '</div>' +
-        '<a class="btn btn--block" style="margin-top:1.2rem" id="ms-lien" href="simulateur.html">' +
-          BI.icone('calculator') + ' Affiner mon estimation</a>' +
+        '<a class="btn btn--line btn--block" style="margin-top:1.4rem" id="ms-lien" href="simulateur.html">' +
+          'Affiner mon estimation ' + BI.icone('arrow-right') + '</a>' +
       '</div>';
 
     function calculer() {
@@ -79,7 +79,7 @@
       $('#ms-sub').textContent = 'Soit ' + BI.fmt(Math.round(r.m2Min / 1000) * 1000) + ' à '
         + BI.fmt(Math.round(r.m2Max / 1000) * 1000) + ' FCFA le m² · chantier estimé à ' + r.duree + ' mois';
       $('#ms-fx').innerHTML = ['EUR', 'USD'].map(function (d) {
-        return '<span class="badge">≈ ' + BI.enDevise(r.min, d) + ' – ' + BI.enDevise(r.max, d) + '</span>';
+        return '<span class="tag">≈ ' + BI.enDevise(r.min, d) + ' – ' + BI.enDevise(r.max, d) + '</span>';
       }).join('');
       $('#ms-lien').href = 'simulateur.html?type=' + etat.type + '&surface=' + etat.surface
         + '&finition=' + etat.finition + '&zone=' + etat.zone;
@@ -146,7 +146,7 @@
     if (!corps) return;
     corps.innerHTML = BI.zones.map(function (z) {
       return '<tr>' +
-        '<th scope="row" style="font-weight:600;text-transform:none;letter-spacing:0;background:none;color:var(--text)">' + BI.escape(z.nom) + '</th>' +
+        '<th scope="row" style="font-family:var(--sans);font-weight:550;font-size:.95rem;text-transform:none;letter-spacing:-.01em;color:var(--ink)">' + BI.escape(z.nom) + '</th>' +
         '<td>' + BI.escape(z.region) + '</td>' +
         '<td class="num">' + BI.fmt(z.terrainMin) + ' – ' + BI.fmt(z.terrainMax) + '</td>' +
         '<td class="num">' + BI.fourchette(z.terrainMin * 200, z.terrainMax * 200) + '</td>' +
@@ -161,30 +161,22 @@
     var hote = $('#apercu-suivi');
     if (!hote) return;
     var c = BI.chantiers['BI-2026-014'];
-    var phases = c.phases.slice(2, 6);
 
     hote.innerHTML =
-      '<div class="cluster" style="justify-content:space-between;margin-bottom:1rem">' +
-        '<span class="badge badge--leaf">' + BI.icone('hard-hat') + ' Chantier ' + c.code + '</span>' +
-        '<span class="badge">' + BI.icone('map-pin') + ' ' + BI.escape(c.lieu) + '</span>' +
+      '<div class="row row--between" style="align-items:baseline;margin-bottom:.8rem">' +
+        '<span class="label">Chantier ' + BI.escape(c.code) + ' \u00b7 ' + BI.escape(c.lieu) + '</span>' +
+        '<span class="mono" style="font-size:2rem;font-weight:500;letter-spacing:-.04em">' + c.avancement + '&nbsp;%</span>' +
       '</div>' +
-      '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.4rem">' +
-        '<strong style="font-size:.9rem">' + BI.escape(c.modele) + '</strong>' +
-        '<span style="font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--accent)">' + c.avancement + '&nbsp;%</span>' +
-      '</div>' +
-      '<div class="progress" role="img" aria-label="Avancement : ' + c.avancement + ' pour cent"><i style="width:' + c.avancement + '%"></i></div>' +
-      '<div class="timeline" style="margin-top:1.4rem">' +
-        phases.map(function (p) {
+      '<div class="progress" role="img" aria-label="Avancement : ' + c.avancement + ' pour cent">' +
+        '<i style="width:' + c.avancement + '%"></i></div>' +
+      '<div class="timeline" style="margin-top:1.6rem">' +
+        c.phases.slice(2, 6).map(function (p) {
           var cls = p.etat === 'fait' ? 'is-done' : (p.etat === 'encours' ? 'is-active' : '');
-          var etiquette = p.etat === 'fait' ? 'Terminé' : (p.etat === 'encours' ? p.pct + ' % — en cours' : 'À venir');
+          var etat = p.etat === 'fait' ? 'Termin\u00e9' : (p.etat === 'encours' ? p.pct + ' % \u00b7 en cours' : '\u00c0 venir');
           return '<div class="tl-item ' + cls + '">' +
             '<p class="tl-title">' + BI.escape(p.nom) + '</p>' +
-            '<time>' + etiquette + '</time>' +
-          '</div>';
+            '<time>' + etat + '</time></div>';
         }).join('') +
-      '</div>' +
-      '<div class="callout" style="margin-top:1.2rem;padding:.9rem 1.1rem">' + BI.icone('camera') +
-        '<p style="font-size:.86rem">Dernières photos publiées le ' + BI.escape(c.photos[0].date) + '.</p>' +
       '</div>';
   }
 

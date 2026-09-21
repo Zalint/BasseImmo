@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-label="Axonométrie du modèle Sine">
+<defs><pattern id="sol" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v10" stroke="#A79C8D" stroke-width=".8" opacity=".5"/></pattern></defs>
+<rect width="900" height="700" fill="#FAF8F4"/>
+<path d="M430.91 243.31 L774.49 441.67 L469.09 618.0 L125.51 419.63 Z" fill="url(#sol)" stroke="#D8D0C4" stroke-width="1.3" stroke-linejoin="round"/>
+<path d="M240.03 419.63 L469.09 551.88 L469.09 483.55 L240.03 351.31 Z" fill="#E2D9CA" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M659.97 441.67 L469.09 551.88 L469.09 483.55 L659.97 373.35 Z" fill="#F0EAE0" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M430.91 241.1 L659.97 373.35 L469.09 483.55 L240.03 351.31 Z" fill="#FBF9F5" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/>
+<path d="M279.54 421.51 L315.05 442.0 L315.05 410.04 L279.54 389.55 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M336.81 454.57 L372.31 475.07 L372.31 443.11 L336.81 422.61 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M394.07 487.63 L429.58 508.13 L429.58 476.17 L394.07 455.67 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M615.43 446.45 L577.25 468.49 L577.25 436.53 L615.43 414.49 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M551.8 483.18 L513.63 505.22 L513.63 473.27 L551.8 451.22 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M240.03 351.31 L469.09 483.55 L469.09 415.22 L240.03 282.98 Z" fill="#E2D9CA" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M659.97 373.35 L469.09 483.55 L469.09 415.22 L659.97 305.02 Z" fill="#F0EAE0" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M430.91 172.78 L659.97 305.02 L469.09 415.22 L240.03 282.98 Z" fill="#FBF9F5" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/>
+<path d="M279.54 353.18 L315.05 373.68 L315.05 341.72 L279.54 321.22 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M336.81 386.24 L372.31 406.74 L372.31 374.78 L336.81 354.28 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M394.07 419.3 L429.58 439.8 L429.58 407.84 L394.07 387.34 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M615.43 378.12 L577.25 400.16 L577.25 368.2 L615.43 346.16 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M551.8 414.86 L513.63 436.9 L513.63 404.94 L551.8 382.9 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M228.58 282.98 L469.09 421.84 L469.09 411.92 L228.58 273.06 Z" fill="#DED4C3" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/><path d="M671.42 305.02 L469.09 421.84 L469.09 411.92 L671.42 295.1 Z" fill="#EBE4D8" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/><path d="M430.91 156.24 L671.42 295.1 L469.09 411.92 L228.58 273.06 Z" fill="#F7F3EC" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/>
+<path d="M430.91 182.69 L625.61 295.1 L469.09 385.47 L274.39 273.06 Z" fill="none" stroke="#6E6459" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M274.39 273.06L469.09 385.47" stroke="#A79C8D" stroke-width="1" opacity=".5" stroke-dasharray="4 4"/>
+<path d="M182.77 452.69L411.82 584.94" stroke="#6E6459" stroke-width="1"/>
+<text x="297.3" y="538.82" text-anchor="middle" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="12" fill="#6E6459">12.0 m</text>
+<text x="34" y="46" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="13" font-weight="600" fill="#1A1713" letter-spacing=".16em">SINE</text>
+<text x="34" y="66" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="11.5" fill="#6E6459" letter-spacing=".06em">AXONOMÉTRIE · DUPLEX À COUR INTÉRIEURE</text>
+<path d="M34 78h150" stroke="#D8D0C4" stroke-width="1"/>
+</svg>

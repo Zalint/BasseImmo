@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-label="Axonométrie du modèle Baobab">
+<defs><pattern id="sol" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v10" stroke="#A79C8D" stroke-width=".8" opacity=".5"/></pattern></defs>
+<rect width="900" height="700" fill="#FAF8F4"/>
+<path d="M406.72 180.72 L828.69 424.35 L493.28 618.0 L71.31 374.38 Z" fill="url(#sol)" stroke="#D8D0C4" stroke-width="1.3" stroke-linejoin="round"/>
+<path d="M201.15 374.38 L493.28 543.04 L493.28 465.58 L201.15 296.92 Z" fill="#E2D9CA" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M698.85 424.35 L493.28 543.04 L493.28 465.58 L698.85 346.89 Z" fill="#F0EAE0" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M406.72 178.23 L698.85 346.89 L493.28 465.58 L201.15 296.92 Z" fill="#FBF9F5" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/>
+<path d="M241.46 373.91 L277.68 394.83 L277.68 358.6 L241.46 337.68 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M299.89 407.65 L336.11 428.56 L336.11 392.33 L299.89 371.41 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M358.31 441.38 L394.54 462.29 L394.54 426.06 L358.31 405.15 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M416.74 475.11 L452.96 496.03 L452.96 459.79 L416.74 438.88 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M650.89 428.31 L609.77 452.04 L609.77 415.81 L650.89 392.07 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M582.36 467.87 L541.25 491.61 L541.25 455.38 L582.36 431.64 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M188.16 296.92 L493.28 473.07 L493.28 461.83 L188.16 285.67 Z" fill="#DED4C3" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/><path d="M711.84 346.89 L493.28 473.07 L493.28 461.83 L711.84 335.65 Z" fill="#EBE4D8" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/><path d="M406.72 159.49 L711.84 335.65 L493.28 461.83 L188.16 285.67 Z" fill="#F7F3EC" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/>
+<path d="M406.72 189.47 L659.9 335.65 L493.28 431.85 L240.1 285.67 Z" fill="none" stroke="#6E6459" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M240.1 285.67L493.28 431.85" stroke="#A79C8D" stroke-width="1" opacity=".5" stroke-dasharray="4 4"/>
+<path d="M136.23 411.86L428.36 580.52" stroke="#6E6459" stroke-width="1"/>
+<text x="282.29" y="516.19" text-anchor="middle" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="12" fill="#6E6459">13.5 m</text>
+<text x="34" y="46" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="13" font-weight="600" fill="#1A1713" letter-spacing=".16em">BAOBAB</text>
+<text x="34" y="66" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="11.5" fill="#6E6459" letter-spacing=".06em">AXONOMÉTRIE · PLAIN-PIED 128 M²</text>
+<path d="M34 78h150" stroke="#D8D0C4" stroke-width="1"/>
+</svg>

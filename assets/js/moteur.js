@@ -135,36 +135,36 @@
   var BI = window.BI;
   BI.carteModele = function (m) {
     var b = BI.budgetModele(m);
-    var tags = [];
-    if (m.usage === 'locatif') tags.push('<span class="badge">' + BI.icone('trending-up') + ' Investissement</span>');
-    if (m.usage === 'mixte') tags.push('<span class="badge">' + BI.icone('coins') + ' Habiter + louer</span>');
-    if (m.standing === 'economique') tags.push('<span class="badge">' + BI.icone('wallet') + ' Petit budget</span>');
-    if (m.standing === 'premium') tags.push('<span class="badge">' + BI.icone('award') + ' Haut standing</span>');
-    if (m.id === 'casamance') tags.push('<span class="badge">' + BI.icone('leaf') + ' Bioclimatique</span>');
 
-    var specs = [
-      '<span>' + BI.icone('maximize') + ' ' + m.surface + ' m²</span>',
-      '<span>' + BI.icone('layers') + ' ' + BI.escape(m.niveaux) + '</span>'
-    ];
-    if (m.chambres > 0) specs.push('<span>' + BI.icone('bed') + ' ' + m.chambres + ' ch.</span>');
-    if (m.sdb > 0) specs.push('<span>' + BI.icone('bath') + ' ' + m.sdb + ' sdb</span>');
-    specs.push('<span>' + BI.icone('map-pin') + ' parcelle ' + m.parcelle + ' m²</span>');
+    var fanion = '';
+    if (m.usage === 'locatif') fanion = 'Investissement';
+    else if (m.usage === 'mixte') fanion = 'Habiter + louer';
+    else if (m.standing === 'economique') fanion = 'Petit budget';
+    else if (m.standing === 'premium') fanion = 'Haut standing';
+    else if (m.id === 'casamance') fanion = 'Bioclimatique';
 
-    return '<article class="model-card" data-modele="' + m.id + '">' +
-      '<div class="model-card__media">' +
-        '<img src="assets/img/modeles/' + m.id + '.svg" width="800" height="600" loading="lazy" alt="Illustration du modèle ' + BI.escape(m.nom) + '">' +
-        (tags.length ? '<div class="model-card__tags">' + tags.join('') + '</div>' : '') +
+    var specs = [m.surface + ' m\u00b2', m.niveaux];
+    if (m.chambres > 0) specs.push(m.chambres + ' ch');
+    if (m.sdb > 0) specs.push(m.sdb + ' sdb');
+    specs.push('parcelle ' + m.parcelle + ' m\u00b2');
+
+    return '<article class="plan-card" data-modele="' + m.id + '">' +
+      '<div class="plan-card__art">' +
+        '<img src="assets/img/plans/' + m.id + '.svg" width="800" height="600" loading="lazy"' +
+        ' alt="Plan du rez-de-chauss\u00e9e du mod\u00e8le ' + BI.escape(m.nom) + '">' +
+        (fanion ? '<span class="plan-card__flag">' + fanion + '</span>' : '') +
       '</div>' +
-      '<div class="model-card__body">' +
-        '<h3 class="model-card__title"><a href="modele.html?id=' + m.id + '">' + BI.escape(m.nom) + '</a></h3>' +
-        '<p class="model-card__sub">' + BI.escape(m.sousTitre) + ' · ' + BI.escape(m.accroche) + '</p>' +
-        '<div class="model-card__specs">' + specs.join('') + '</div>' +
-        '<div class="model-card__price">' +
-          '<span><b>' + BI.fourchette(b.min, b.max) + '</b><br><small>hors terrain · ' + b.duree + ' mois de chantier</small></span>' +
-          '<a class="btn btn--sm btn--ghost" href="modele.html?id=' + m.id + '" aria-label="Voir la fiche du modèle ' + BI.escape(m.nom) + '">Voir</a>' +
+      '<div class="plan-card__body">' +
+        '<h3 class="plan-card__name"><a href="modele.html?id=' + m.id + '">' + BI.escape(m.nom) + '</a></h3>' +
+        '<p class="plan-card__sub">' + BI.escape(m.sousTitre) + '. ' + BI.escape(m.accroche) + '</p>' +
+        '<div class="plan-card__specs">' +
+          specs.map(function (x) { return '<span>' + x + '</span>'; }).join('') +
+        '</div>' +
+        '<div class="plan-card__price">' +
+          '<b>' + BI.fourchette(b.min, b.max) + '</b>' +
+          '<span>' + b.duree + ' mois de chantier</span>' +
         '</div>' +
       '</div>' +
     '</article>';
   };
-
 })();

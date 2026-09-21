@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-label="Axonométrie du modèle Gorée">
+<defs><pattern id="sol" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v10" stroke="#A79C8D" stroke-width=".8" opacity=".5"/></pattern></defs>
+<rect width="900" height="700" fill="#FAF8F4"/>
+<path d="M433.64 259.17 L760.76 448.03 L466.36 618.0 L139.24 429.14 Z" fill="url(#sol)" stroke="#D8D0C4" stroke-width="1.3" stroke-linejoin="round"/>
+<path d="M270.09 429.14 L466.36 542.46 L466.36 464.39 L270.09 351.08 Z" fill="#E2D9CA" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M629.91 448.03 L466.36 542.46 L466.36 464.39 L629.91 369.96 Z" fill="#F0EAE0" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M433.64 256.65 L629.91 369.96 L466.36 464.39 L270.09 351.08 Z" fill="#FBF9F5" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/>
+<path d="M315.23 431.28 L355.79 454.7 L355.79 418.19 L315.23 394.77 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M380.65 469.05 L421.21 492.47 L421.21 455.96 L380.65 432.54 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M591.75 446.14 L559.04 465.02 L559.04 428.51 L591.75 409.62 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M537.23 477.61 L504.52 496.5 L504.52 459.99 L537.23 441.1 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M270.09 351.08 L466.36 464.39 L466.36 386.33 L270.09 273.02 Z" fill="#E2D9CA" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M629.91 369.96 L466.36 464.39 L466.36 386.33 L629.91 291.9 Z" fill="#F0EAE0" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M433.64 178.59 L629.91 291.9 L466.36 386.33 L270.09 273.02 Z" fill="#FBF9F5" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/>
+<path d="M315.23 353.22 L355.79 376.64 L355.79 340.12 L315.23 316.71 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M380.65 390.99 L421.21 414.41 L421.21 377.9 L380.65 354.48 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M591.75 368.08 L559.04 386.96 L559.04 350.45 L591.75 331.56 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M537.23 399.55 L504.52 418.44 L504.52 381.92 L537.23 363.04 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M257.0 273.02 L466.36 393.89 L466.36 382.55 L257.0 261.68 Z" fill="#DED4C3" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/><path d="M643.0 291.9 L466.36 393.89 L466.36 382.55 L643.0 280.57 Z" fill="#EBE4D8" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/><path d="M433.64 159.7 L643.0 280.57 L466.36 382.55 L257.0 261.68 Z" fill="#F7F3EC" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/>
+<path d="M433.64 189.92 L590.66 280.57 L466.36 352.34 L309.34 261.68 Z" fill="none" stroke="#6E6459" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M309.34 261.68L466.36 352.34" stroke="#A79C8D" stroke-width="1" opacity=".5" stroke-dasharray="4 4"/>
+<path d="M204.66 466.91L400.93 580.23" stroke="#6E6459" stroke-width="1"/>
+<text x="302.8" y="543.57" text-anchor="middle" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="12" fill="#6E6459">9.0 m</text>
+<text x="34" y="46" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="13" font-weight="600" fill="#1A1713" letter-spacing=".16em">GORÉE</text>
+<text x="34" y="66" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="11.5" fill="#6E6459" letter-spacing=".06em">AXONOMÉTRIE · MAISON DE VILLE R+1</text>
+<path d="M34 78h150" stroke="#D8D0C4" stroke-width="1"/>
+</svg>

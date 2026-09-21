@@ -84,19 +84,18 @@
     var hote = $('#filtres');
     if (!hote) return;
     hote.innerHTML = GROUPES.map(function (g) {
-      return '<fieldset style="border:0;padding:0;margin:0">' +
-        '<legend class="field-label" style="padding:0;margin-bottom:.5rem">' + g.label + '</legend>' +
+      return '<fieldset class="filters__group" style="border:0;padding:0;margin:0">' +
+        '<legend class="label filters__legend" style="padding:0">' + g.label + '</legend>' +
         '<div class="chips" role="group">' +
           g.choix.map(function (c) {
             return '<button class="chip" type="button" data-groupe="' + g.cle + '" data-valeur="' + c.id + '"' +
-              ' aria-pressed="' + (etat[g.cle] === c.id) + '">' +
-              (c.icone ? BI.icone(c.icone) : '') + c.label + '</button>';
+              ' aria-pressed="' + (etat[g.cle] === c.id) + '">' + c.label + '</button>';
           }).join('') +
         '</div>' +
       '</fieldset>';
     }).join('') +
-    '<div><button class="chip" type="button" id="reinit" style="border-style:dashed">' +
-      BI.icone('refresh') + 'Tout réinitialiser</button></div>';
+    '<div class="filters__group"><button class="chip" type="button" id="reinit" style="border-style:dashed">' +
+      BI.icone('refresh') + ' Réinitialiser</button></div>';
 
     hote.addEventListener('click', function (e) {
       var btn = e.target.closest('[data-groupe]');

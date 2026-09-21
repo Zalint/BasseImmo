@@ -127,7 +127,7 @@
       '<div class="sim__group">' +
         '<h3>' + BI.icone('bank') + ' Le financement</h3>' +
         '<p class="field__hint" style="margin-bottom:1rem">Simulation indicative d\'un crédit habitat. Les conditions réelles dépendent de votre banque et de votre dossier.</p>' +
-        '<div class="grid grid--2" style="gap:14px">' +
+        '<div class="cols cols--2" style="gap:0 20px">' +
           '<div class="field">' +
             '<div class="range-head"><label for="sim-apport">Apport personnel</label>' +
               '<span class="range-value"><span id="sim-apport-val">' + etat.apport + '</span><small>%</small></span></div>' +
@@ -166,14 +166,13 @@
     var blocTerrain = '';
     if (r.terrain) {
       blocTerrain =
-        '<div style="margin-top:1.5rem;padding-top:1.3rem;border-top:1px solid rgba(255,255,255,.12)">' +
-          '<p style="font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--clay-300);margin-bottom:.5rem">' +
-            'Terrain estimé en plus</p>' +
-          '<p style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:.2rem">' +
+        '<div style="margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.16)">' +
+          '<p class="label" style="margin-bottom:.5rem">Terrain estimé en plus</p>' +
+          '<p style="font-size:1.6rem;font-weight:620;letter-spacing:-.04em;color:var(--on-umber);margin-bottom:.2rem">' +
             BI.fourchette(r.terrain.min, r.terrain.max) + '</p>' +
-          '<p style="font-size:.82rem;color:rgba(244,233,218,.6)">' + etat.parcelle + ' m² à ' +
+          '<p class="mono" style="font-size:.74rem;color:var(--on-umber-mute)">' + etat.parcelle + ' m² à ' +
             BI.fmt(r.terrain.m2Min) + ' – ' + BI.fmt(r.terrain.m2Max) + ' FCFA/m² · hors frais de mutation</p>' +
-          '<p style="margin-top:.7rem;font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--clay-300)">' +
+          '<p style="margin-top:.8rem;font-size:1.15rem;font-weight:600;letter-spacing:-.03em;color:var(--clay)">' +
             'Tout compris : ' + BI.fourchette(r.min + r.terrain.min, r.max + r.terrain.max) + '</p>' +
         '</div>';
     }
@@ -181,32 +180,30 @@
     var blocCredit = '';
     if (mensualite) {
       blocCredit =
-        '<div style="margin-top:1.5rem;padding-top:1.3rem;border-top:1px solid rgba(255,255,255,.12)">' +
-          '<p style="font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--clay-300);margin-bottom:.5rem">' +
-            'Mensualité estimée</p>' +
-          '<p style="font-family:var(--font-display);font-size:1.6rem;font-weight:700;color:#fff">' + BI.fcfa(Math.round(mensualite)) + '<span style="font-size:.9rem;font-weight:500;color:rgba(244,233,218,.6)"> / mois</span></p>' +
-          '<p style="font-size:.82rem;color:rgba(244,233,218,.6);margin-top:.3rem">Apport de ' + BI.fcfaCourt(r.moyen * etat.apport / 100) +
+        '<div style="margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.16)">' +
+          '<p class="label" style="margin-bottom:.5rem">Mensualité estimée</p>' +
+          '<p style="font-size:1.7rem;font-weight:620;letter-spacing:-.04em;color:var(--on-umber)">' + BI.fcfa(Math.round(mensualite)) + '<span style="font-size:.9rem;font-weight:400;color:var(--on-umber-mute)"> / mois</span></p>' +
+          '<p class="mono" style="font-size:.74rem;color:var(--on-umber-mute);margin-top:.4rem">Apport de ' + BI.fcfaCourt(r.moyen * etat.apport / 100) +
             ', emprunt de ' + BI.fcfaCourt(aFinancer) + ' sur ' + etat.annees + ' ans à ' + String(etat.taux).replace('.', ',') + ' %</p>' +
         '</div>';
     }
 
     return '' +
-      '<p class="eyebrow" style="color:var(--clay-300);margin-bottom:.6rem">Budget construction</p>' +
+      '<p class="label" style="margin-bottom:.4rem">Budget construction</p>' +
       '<p class="sim__total">' + BI.fourchette(r.min, r.max) + '</p>' +
       '<p class="sim__total-sub">' + r.surface + ' m² · ' + BI.fmt(Math.round(r.m2Min / 1000) * 1000) + ' à ' +
         BI.fmt(Math.round(r.m2Max / 1000) * 1000) + ' FCFA le m² · chantier estimé à ' + r.duree + ' mois</p>' +
       '<div class="sim__fx">' +
         ['EUR', 'USD', 'CAD'].map(function (d) {
-          return '<span class="badge">' + BI.enDevise(r.min, d) + ' – ' + BI.enDevise(r.max, d) + '</span>';
+          return '<span class="tag">' + BI.enDevise(r.min, d) + ' – ' + BI.enDevise(r.max, d) + '</span>';
         }).join('') +
       '</div>' +
       '<div class="sim__breakdown">' + barres + '</div>' +
       blocTerrain +
       blocCredit +
-      '<div class="stack" style="margin-top:1.6rem">' +
-        '<a class="btn btn--block" id="sim-wa" href="#">' + BI.icone('whatsapp') + ' Envoyer cette estimation</a>' +
-        '<a class="btn btn--block btn--ghost" style="border-color:rgba(255,255,255,.22);color:#fff" href="contact.html">' +
-          BI.icone('send') + ' Demander un devis détaillé</a>' +
+      '<div class="stack" style="margin-top:1.8rem">' +
+        '<a class="btn btn--accent btn--block" id="sim-wa" href="#">' + BI.icone('whatsapp') + ' Envoyer cette estimation</a>' +
+        '<a class="btn btn--line btn--block" href="contact.html">Demander un devis détaillé ' + BI.icone('arrow-right') + '</a>' +
       '</div>' +
       '<div class="sim__note">' + BI.icone('info') +
         '<span>Estimation indicative fondée sur des prix de marché observés au Sénégal. Elle ne vaut pas devis. Rien n\'est enregistré ni transmis.</span>' +
@@ -234,11 +231,11 @@
   }
 
   function echeancierHtml(r) {
-    return '<div class="card" style="margin-top:24px" data-reveal>' +
-      '<h3 style="display:flex;align-items:center;gap:.5rem"><span style="color:var(--accent);display:flex">' +
-        BI.icone('calendar') + '</span> Comment vous paierez</h3>' +
-      '<p style="color:var(--text-soft);font-size:.93rem">Chaque tranche n\'est appelée qu\'après constat d\'avancement sur site. Aucun paiement à l\'avance, aucun paiement au calendrier seul.</p>' +
-      '<div class="schedule" style="margin-top:1rem">' +
+    return '<div style="margin-top:3.5rem;border-top:1px solid var(--hair);padding-top:2.2rem" data-reveal>' +
+      '<p class="label label--accent" style="margin-bottom:.9rem">Échéancier</p>' +
+      '<h3 style="max-width:20ch">Comment vous paierez</h3>' +
+      '<p style="color:var(--ink-soft);font-size:.96rem;max-width:58ch">Chaque tranche n\'est appelée qu\'après constat d\'avancement sur site. Aucun paiement à l\'avance, aucun paiement au calendrier seul.</p>' +
+      '<div style="margin-top:1.4rem;border-top:1px solid var(--hair)">' +
         r.echeancier.map(function (e, i) {
           return '<div class="sched-row">' +
             '<span class="sched-row__dot">' + (i + 1) + '</span>' +
@@ -329,14 +326,14 @@
       ['map-pin', 'La zone',
        'Construire à Ziguinchor ou à Kédougou coûte plus cher qu\'à Thiès : les matériaux voyagent plus loin et les équipes doivent être hébergées. L\'écart atteint couramment 15 %.']
     ];
-    hote.innerHTML = cartes.map(function (c) {
-      return '<div class="card" data-reveal>' +
-        '<div class="feature-row">' +
-          '<span class="icon-badge">' + BI.icone(c[0]) + '</span>' +
-          '<div><h3>' + c[1] + '</h3><p>' + c[2] + '</p></div>' +
-        '</div>' +
+    hote.innerHTML = '<div class="entries" style="grid-column:1/-1">' + cartes.map(function (c, i) {
+      return '<div class="entry" data-reveal>' +
+        '<span class="entry__idx">' + ('0' + (i + 1)).slice(-2) + '</span>' +
+        '<h3 class="entry__title">' + c[1] + '</h3>' +
+        '<p class="entry__desc">' + c[2] + '</p>' +
+        '<span></span>' +
       '</div>';
-    }).join('');
+    }).join('') + '</div>';
   }
 
   document.addEventListener('bi:ready', function () {

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-label="Axonométrie du modèle Lompoul">
+<defs><pattern id="sol" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v10" stroke="#A79C8D" stroke-width=".8" opacity=".5"/></pattern></defs>
+<rect width="900" height="700" fill="#FAF8F4"/>
+<path d="M412.75 187.91 L822.47 424.46 L487.25 618.0 L77.53 381.45 Z" fill="url(#sol)" stroke="#D8D0C4" stroke-width="1.3" stroke-linejoin="round"/>
+<path d="M226.52 381.45 L487.25 531.98 L487.25 443.1 L226.52 292.57 Z" fill="#E2D9CA" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M673.48 424.46 L487.25 531.98 L487.25 443.1 L673.48 335.58 Z" fill="#F0EAE0" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M412.75 185.04 L673.48 335.58 L487.25 443.1 L226.52 292.57 Z" fill="#FBF9F5" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/>
+<path d="M271.49 380.18 L311.91 403.51 L311.91 361.94 L271.49 338.6 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M336.68 417.81 L377.09 441.14 L377.09 399.57 L336.68 376.24 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M401.86 455.44 L442.27 478.78 L442.27 437.2 L401.86 413.87 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M630.03 422.31 L592.78 443.81 L592.78 402.24 L630.03 380.73 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M567.95 458.15 L530.7 479.65 L530.7 438.08 L567.95 416.58 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M211.62 292.57 L487.25 451.7 L487.25 438.8 L211.62 279.66 Z" fill="#DED4C3" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/><path d="M688.38 335.58 L487.25 451.7 L487.25 438.8 L688.38 322.67 Z" fill="#EBE4D8" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/><path d="M412.75 163.54 L688.38 322.67 L487.25 438.8 L211.62 279.66 Z" fill="#F7F3EC" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/>
+<path d="M412.75 197.95 L628.78 322.67 L487.25 404.39 L271.22 279.66 Z" fill="none" stroke="#6E6459" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M271.22 279.66L487.25 404.39" stroke="#A79C8D" stroke-width="1" opacity=".5" stroke-dasharray="4 4"/>
+<path d="M152.03 424.46L412.75 574.99" stroke="#6E6459" stroke-width="1"/>
+<text x="282.39" y="519.73" text-anchor="middle" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="12" fill="#6E6459">10.5 m</text>
+<text x="34" y="46" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="13" font-weight="600" fill="#1A1713" letter-spacing=".16em">LOMPOUL</text>
+<text x="34" y="66" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="11.5" fill="#6E6459" letter-spacing=".06em">AXONOMÉTRIE · PLAIN-PIED 78 M²</text>
+<path d="M34 78h150" stroke="#D8D0C4" stroke-width="1"/>
+</svg>

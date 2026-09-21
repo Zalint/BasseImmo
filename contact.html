@@ -6,8 +6,8 @@
 <title>Contact et demande de devis | Basse Immo</title>
 <meta name="description" content="Demandez un devis de construction au Sénégal. Réponse sous dix jours ouvrés, ou immédiatement sur WhatsApp. Bureau à Dakar, intervention dans tout le pays.">
 <link rel="canonical" href="https://basseimmo.sn/contact.html">
-<meta name="theme-color" content="#A25C2C" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#1A120C" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FAF8F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141210" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Basse Immo">
 <meta property="og:locale" content="fr_SN">
@@ -17,10 +17,9 @@
 <meta property="og:image" content="https://basseimmo.sn/assets/img/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="assets/css/style.css">
 <script>
 /* Applique le thème enregistré avant le premier rendu, pour éviter un flash clair. */
@@ -32,10 +31,10 @@
 <header class="header">
   <div class="container header__inner">
     <a class="brand" href="index.html" aria-label="Basse Immo, accueil">
-      <span class="brand__mark"><svg class="ico" aria-hidden="true"><use href="#i-villa"></use></svg></span>
-      <span class="brand__text">
+      <span class="brand__mark"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M16 4 28 11 16 18 4 11z"/><path d="M4 11v10l12 7V18"/><path d="M28 11v10l-12 7"/></svg></span>
+      <span>
         <span class="brand__name">Basse Immo</span>
-        <span class="brand__tag">Construire au Sénégal</span>
+        <span class="brand__tag">Atelier de construction · Dakar</span>
       </span>
     </a>
 
@@ -46,11 +45,11 @@
         <li><a class="nav__link" href="services.html">Services</a></li>
         <li><a class="nav__link" href="suivi.html">Suivi de chantier</a></li>
         <li><a class="nav__link" href="guide.html">Guide</a></li>
-        <li><a class="nav__link" href="a-propos.html">À propos</a></li>
+        <li><a class="nav__link" href="a-propos.html">Atelier</a></li>
       </ul>
       <div class="nav__mobile-cta">
         <a class="btn btn--wa" data-wa="Bonjour Basse Immo, je souhaite échanger sur mon projet." href="#"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"></use></svg> Écrire sur WhatsApp</a>
-        <a class="btn btn--ghost" href="contact.html">Demander un devis</a>
+        <a class="btn btn--line" href="contact.html">Demander un devis</a>
       </div>
     </nav>
 
@@ -59,7 +58,7 @@
         <svg class="ico ico--sun" aria-hidden="true"><use href="#i-sun"></use></svg>
         <svg class="ico ico--moon" aria-hidden="true"><use href="#i-moon"></use></svg>
       </button>
-      <a class="btn btn--sm header__cta" href="contact.html"><svg class="ico" aria-hidden="true"><use href="#i-file-text"></use></svg> Devis gratuit</a>
+      <a class="btn btn--sm header__cta" href="contact.html">Devis gratuit <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
       <button class="burger" type="button" data-burger aria-expanded="false" aria-controls="nav-principal" aria-label="Ouvrir le menu"><svg class="ico" aria-hidden="true"><use href="#i-menu"></use></svg></button>
     </div>
   </div>
@@ -69,30 +68,29 @@
 <section class="page-head">
   <div class="container">
     <ol class="crumbs"><li><a href="index.html">Accueil</a></li><li aria-current="page">Contact</li></ol>
-    <h1>Parlons de votre projet</h1>
+    <p class="label label--accent" style="margin-bottom:1rem">Contact</p><h1>Parlons de votre projet</h1>
     <p>Remplissez ce formulaire et il préparera pour vous un message WhatsApp ou un e-mail déjà rédigé, que vous n'aurez plus qu'à envoyer. Rien n'est enregistré sur ce site.</p>
   </div>
 </section>
 
 <section class="section section--tight">
   <div class="container">
-    <div class="grid grid--2" style="gap:clamp(1.5rem,3vw,2.5rem);align-items:start">
+    <div class="grid12">
 
-      <div class="card" style="padding:clamp(1.3rem,3vw,2rem)">
-        <h2 style="font-size:1.4rem">Décrire mon projet</h2>
-        <form id="form-contact" novalidate style="margin-top:1.4rem">
-          <div class="grid grid--2" style="gap:0 14px">
+      <div class="c7">
+        <h2 style="font-size:clamp(1.5rem,2.6vw,2rem)">Décrire mon projet</h2>
+        <form id="form-contact" novalidate style="margin-top:1.8rem">
+          <div class="cols cols--2" style="gap:0 20px">
             <div class="field">
-              <label for="f-nom">Votre nom <span aria-hidden="true" style="color:var(--brick-500)">*</span></label>
+              <label for="f-nom">Votre nom *</label>
               <input class="input" id="f-nom" name="nom" type="text" autocomplete="name" required>
             </div>
             <div class="field">
-              <label for="f-tel">Téléphone ou WhatsApp <span aria-hidden="true" style="color:var(--brick-500)">*</span></label>
+              <label for="f-tel">Téléphone ou WhatsApp *</label>
               <input class="input" id="f-tel" name="tel" type="tel" autocomplete="tel" placeholder="+221 77 …" required>
             </div>
           </div>
-
-          <div class="grid grid--2" style="gap:0 14px">
+          <div class="cols cols--2" style="gap:0 20px">
             <div class="field">
               <label for="f-email">E-mail</label>
               <input class="input" id="f-email" name="email" type="email" autocomplete="email">
@@ -102,18 +100,15 @@
               <input class="input" id="f-pays" name="pays" type="text" placeholder="Dakar, Paris, Milan…" autocomplete="country-name">
             </div>
           </div>
-
           <div class="field">
             <label for="f-projet">Votre projet</label>
             <select class="select" id="f-projet" name="projet"></select>
           </div>
-
           <div class="field">
             <label for="f-modele">Un modèle vous intéresse&nbsp;?</label>
             <select class="select" id="f-modele" name="modele"></select>
           </div>
-
-          <div class="grid grid--2" style="gap:0 14px">
+          <div class="cols cols--2" style="gap:0 20px">
             <div class="field">
               <label for="f-zone">Zone de construction</label>
               <select class="select" id="f-zone" name="zone"></select>
@@ -130,7 +125,6 @@
               </select>
             </div>
           </div>
-
           <div class="field">
             <span class="field-label" id="lbl-terrain">Avez-vous déjà le terrain&nbsp;?</span>
             <div class="choices choices--3" role="radiogroup" aria-labelledby="lbl-terrain">
@@ -139,60 +133,87 @@
               <label class="choice"><input type="radio" name="terrain" value="Pas encore de terrain"><svg class="ico" aria-hidden="true"><use href="#i-search"></use></svg><span class="choice__label">Pas encore</span></label>
             </div>
           </div>
-
           <div class="field">
             <label for="f-message">Dites-nous en plus</label>
             <textarea class="textarea" id="f-message" name="message" placeholder="Nombre de chambres, contraintes de la parcelle, échéance souhaitée, questions…"></textarea>
           </div>
-
-          <p id="form-erreur" role="alert" style="display:none;color:var(--brick-500);font-size:.9rem;font-weight:600;margin-bottom:.8rem"></p>
-
+          <p id="form-erreur" role="alert" style="display:none;color:var(--clay);font-size:.9rem;font-weight:550;margin-bottom:.9rem"></p>
           <div class="stack">
             <button class="btn btn--wa btn--block btn--lg" type="submit" id="envoi-wa"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"></use></svg> Envoyer sur WhatsApp</button>
-            <button class="btn btn--ghost btn--block" type="button" id="envoi-mail"><svg class="ico" aria-hidden="true"><use href="#i-mail"></use></svg> Envoyer par e-mail</button>
+            <button class="btn btn--line btn--block" type="button" id="envoi-mail"><svg class="ico" aria-hidden="true"><use href="#i-mail"></use></svg> Envoyer par e-mail</button>
           </div>
-          <p style="font-size:.82rem;color:var(--text-mute);margin-top:1rem">Ce site n'a pas de base de données : votre message part directement dans votre application WhatsApp ou votre messagerie. Rien n'est stocké ici.</p>
+          <p class="mono" style="font-size:.72rem;color:var(--ink-mute);margin-top:1.2rem;line-height:1.7">Ce site n'a pas de base de données : votre message part directement dans votre application WhatsApp ou votre messagerie. Rien n'est stocké ici.</p>
         </form>
       </div>
 
-      <div class="stack">
-        <div class="card">
-          <h3 style="font-size:1.15rem">Nous joindre directement</h3>
-          <ul class="checklist" style="margin-top:1.1rem;gap:1rem">
-            <li><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"></use></svg> <span><strong style="color:var(--text);display:block">WhatsApp</strong>
-              <a data-wa="Bonjour Basse Immo," href="#"><span data-bi="whatsapp"></span></a> — le plus rapide</span></li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-phone"></use></svg> <span><strong style="color:var(--text);display:block">Téléphone</strong>
-              <a data-href="tel" href="#"><span data-bi="tel"></span></a></span></li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-mail"></use></svg> <span><strong style="color:var(--text);display:block">E-mail</strong>
-              <a data-href="email" href="#"><span data-bi="email"></span></a></span></li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-map-pin"></use></svg> <span><strong style="color:var(--text);display:block">Bureau</strong>
-              <span data-bi="adresse"></span></span></li>
-            <li><svg class="ico" aria-hidden="true"><use href="#i-clock"></use></svg> <span><strong style="color:var(--text);display:block">Horaires</strong>
-              <span data-bi="horaires"></span></span></li>
-          </ul>
+      <div class="c4 start9">
+        <p class="label label--accent" style="margin-bottom:1.2rem">Nous joindre directement</p>
+        <dl class="specs">
+          <div><dt>WhatsApp</dt><dd><a data-wa="Bonjour Basse Immo," href="#"><span data-bi="whatsapp"></span></a></dd></div>
+          <div><dt>Téléphone</dt><dd><a data-href="tel" href="#"><span data-bi="tel"></span></a></dd></div>
+          <div><dt>E-mail</dt><dd><a data-href="email" href="#"><span data-bi="email"></span></a></dd></div>
+        </dl>
+        <p style="margin-top:1.2rem;font-size:.93rem;color:var(--ink-soft)"><span data-bi="adresse"></span><br><span data-bi="horaires"></span></p>
+
+        <p class="label label--accent" style="margin:2.4rem 0 1rem">Ce qui se passe ensuite</p>
+        <div style="border-top:1px solid var(--hair)">
+          <div class="sched-row"><span class="sched-row__dot">01</span><span>Nous vous rappelons<small>Sous 24 h ouvrées</small></span><strong></strong></div>
+          <div class="sched-row"><span class="sched-row__dot">02</span><span>Échange de 30 minutes<small>Besoin, budget, terrain</small></span><strong>Gratuit</strong></div>
+          <div class="sched-row"><span class="sched-row__dot">03</span><span>Visite du terrain<small>Ou analyse à distance</small></span><strong></strong></div>
+          <div class="sched-row"><span class="sched-row__dot">04</span><span>Devis détaillé<small>Poste par poste, prix ferme</small></span><strong>10 jours</strong></div>
         </div>
 
-        <div class="card">
-          <h3 style="font-size:1.15rem">Ce qui se passe ensuite</h3>
-          <div class="schedule" style="margin-top:.8rem">
-            <div class="sched-row"><span class="sched-row__dot">1</span><span>Nous vous rappelons<small>Sous 24 heures ouvrées</small></span><strong></strong></div>
-            <div class="sched-row"><span class="sched-row__dot">2</span><span>Échange de 30 minutes<small>Besoin, budget, terrain</small></span><strong>Gratuit</strong></div>
-            <div class="sched-row"><span class="sched-row__dot">3</span><span>Visite du terrain<small>Ou analyse des documents à distance</small></span><strong></strong></div>
-            <div class="sched-row"><span class="sched-row__dot">4</span><span>Devis détaillé<small>Poste par poste, prix ferme</small></span><strong>10 jours</strong></div>
-          </div>
-        </div>
-
-        <div class="callout callout--gold">
+        <div class="note" style="margin-top:2.4rem">
           <svg class="ico" aria-hidden="true"><use href="#i-plane"></use></svg>
           <p><strong>Vous vivez à l'étranger&nbsp;?</strong> Précisez votre fuseau horaire dans le message : nous appelons volontiers en soirée pour l'Europe et l'Amérique du Nord.</p>
         </div>
-
-        <div class="callout">
-          <svg class="ico" aria-hidden="true"><use href="#i-calculator"></use></svg>
-          <p><strong>Vous voulez un ordre de prix tout de suite&nbsp;?</strong> Le <a href="simulateur.html">simulateur</a> donne une fourchette en deux minutes, sans nous contacter.</p>
-        </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper2">
+  <div class="container">
+  <div class="shead shead--split">
+    <div class="shead__top"><span class="idx">—</span><span class="label">Questions fréquentes</span></div>
+    <div><h2>Vous vous demandez sûrement…</h2></div>
+    <div>
+    </div>
+  </div>
+    <div class="accordion">
+      <div class="acc-item">
+        <h3 style="margin:0"><button class="acc-btn" type="button" aria-expanded="false" id="faq-1">Puis-je construire si je n'ai pas encore de terrain&nbsp;? <svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg></button></h3>
+        <div class="acc-panel" role="region" aria-labelledby="faq-1"><div><p>Oui. Nous vous aidons à définir la zone et le budget terrain cohérents avec votre projet, puis nous vérifions le statut juridique de la parcelle que vous aurez repérée avant que vous ne versiez le moindre acompte.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <h3 style="margin:0"><button class="acc-btn" type="button" aria-expanded="false" id="faq-2">Travaillez-vous avec les Sénégalais de l'étranger&nbsp;? <svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg></button></h3>
+        <div class="acc-panel" role="region" aria-labelledby="faq-2"><div><p>C'est une grande partie de notre activité. Tout se pilote à distance : signature électronique, procuration notariée établie au consulat, espace de suivi en ligne avec photos hebdomadaires, et visite du chantier en visioconférence sur rendez-vous.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <h3 style="margin:0"><button class="acc-btn" type="button" aria-expanded="false" id="faq-3">Le prix annoncé peut-il augmenter en cours de chantier&nbsp;? <svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg></button></h3>
+        <div class="acc-panel" role="region" aria-labelledby="faq-3"><div><p>Le marché est signé à prix ferme. Il ne bouge que si vous demandez une modification, et dans ce cas un avenant chiffré est signé avant toute exécution. Aucun travail supplémentaire n'est engagé sans votre accord écrit.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <h3 style="margin:0"><button class="acc-btn" type="button" aria-expanded="false" id="faq-4">Combien de temps dure une construction&nbsp;? <svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg></button></h3>
+        <div class="acc-panel" role="region" aria-labelledby="faq-4"><div><p>Environ six à huit mois pour un plain-pied, neuf à douze mois pour un R+1, douze à dix-huit mois pour un R+2 ou un immeuble. Le permis de construire s'ajoute en amont, comptez un à trois mois.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <h3 style="margin:0"><button class="acc-btn" type="button" aria-expanded="false" id="faq-5">Puis-je faire modifier un modèle du catalogue&nbsp;? <svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg></button></h3>
+        <div class="acc-panel" role="region" aria-labelledby="faq-5"><div><p>Oui, et c'est même le cas le plus fréquent. Les modèles sont des points de départ : on ajuste le nombre de chambres, l'orientation, la façade et l'implantation à la forme réelle de votre parcelle.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <h3 style="margin:0"><button class="acc-btn" type="button" aria-expanded="false" id="faq-6">Comment se déroulent les paiements&nbsp;? <svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg></button></h3>
+        <div class="acc-panel" role="region" aria-labelledby="faq-6"><div><p>Par phases validées, jamais à l'avance. Dix pour cent au lancement, puis des tranches libérées après constat d'avancement, et cinq pour cent seulement à la réception et à la levée des réserves.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <h3 style="margin:0"><button class="acc-btn" type="button" aria-expanded="false" id="faq-7">Quelles garanties sont fournies&nbsp;? <svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg></button></h3>
+        <div class="acc-panel" role="region" aria-labelledby="faq-7"><div><p>La garantie de parfait achèvement pendant un an, la garantie biennale sur les équipements et la garantie décennale sur la structure. Les attestations des entreprises vous sont remises avec le dossier des ouvrages exécutés.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <h3 style="margin:0"><button class="acc-btn" type="button" aria-expanded="false" id="faq-8">Intervenez-vous partout au Sénégal&nbsp;? <svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg></button></h3>
+        <div class="acc-panel" role="region" aria-labelledby="faq-8"><div><p>Oui, de Saint-Louis à Ziguinchor. Le coût de construction varie selon l'éloignement, en raison du transport des matériaux et de l'hébergement des équipes : le simulateur en tient compte automatiquement.</p></div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -207,10 +228,10 @@
     <div class="footer__grid">
       <div>
         <a class="brand" href="index.html">
-          <span class="brand__mark"><svg class="ico" aria-hidden="true"><use href="#i-villa"></use></svg></span>
-          <span class="brand__text">
+          <span class="brand__mark"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M16 4 28 11 16 18 4 11z"/><path d="M4 11v10l12 7V18"/><path d="M28 11v10l-12 7"/></svg></span>
+          <span>
             <span class="brand__name">Basse Immo</span>
-            <span class="brand__tag">Construire au Sénégal</span>
+            <span class="brand__tag">Atelier de construction · Dakar</span>
           </span>
         </a>
         <p class="footer__about">Conception, construction et suivi de maisons au Sénégal. Un devis clair, un chantier que vous suivez en ligne, des clés remises à la date convenue.</p>
@@ -224,11 +245,11 @@
 
       <div>
         <h2>Explorer</h2>
-        <ul><li><a href="modeles.html">Modèles</a></li><li><a href="simulateur.html">Simulateur</a></li><li><a href="services.html">Services</a></li><li><a href="suivi.html">Suivi de chantier</a></li><li><a href="guide.html">Guide</a></li><li><a href="a-propos.html">À propos</a></li></ul>
+        <ul><li><a href="modeles.html">Modèles</a></li><li><a href="simulateur.html">Simulateur</a></li><li><a href="services.html">Services</a></li><li><a href="suivi.html">Suivi de chantier</a></li><li><a href="guide.html">Guide</a></li><li><a href="a-propos.html">Atelier</a></li></ul>
       </div>
 
       <div>
-        <h2>Nos services</h2>
+        <h2>Prestations</h2>
         <ul>
           <li><a href="services.html#cle-en-main">Construction clé en main</a></li>
           <li><a href="services.html#foncier">Vérification du terrain</a></li>
@@ -247,13 +268,13 @@
           <li><svg class="ico" aria-hidden="true"><use href="#i-mail"></use></svg><a data-href="email" href="#"><span data-bi="email"></span></a></li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-clock"></use></svg><span data-bi="horaires"></span></li>
         </ul>
-        <a class="btn btn--wa btn--sm" style="margin-top:1rem" data-wa="Bonjour Basse Immo, je souhaite des informations." href="#"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"></use></svg> WhatsApp</a>
+        <a class="btn btn--wa btn--sm" style="margin-top:1.2rem" data-wa="Bonjour Basse Immo, je souhaite des informations." href="#"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"></use></svg> WhatsApp</a>
       </div>
     </div>
 
     <div class="footer__bottom">
-      <p>© <span data-bi="annee"></span> Basse Immo. Tous droits réservés.</p>
-      <p>Les montants affichés sur ce site sont des estimations indicatives, hors terrain et hors taxes.</p>
+      <p>© <span data-bi="annee"></span> Basse Immo</p>
+      <p>Montants indicatifs, hors terrain et hors taxes</p>
     </div>
   </div>
 </footer>

@@ -1,8 +1,11 @@
 # Basse Immo — site de construction de maisons au Sénégal
 
-Site vitrine statique pour une entreprise de conception et de construction de
+Site vitrine statique pour un atelier de conception et de construction de
 maisons au Sénégal : catalogue de plans chiffrés, simulateur de budget en francs
 CFA, guide pratique et espace de suivi de chantier destiné à la diaspora.
+
+La direction artistique est celle d'un studio d'architecture : dessin technique
+au trait, typographie large, aucune photographie.
 
 Aucune dépendance, aucune étape de compilation, aucun serveur applicatif :
 ce sont des fichiers HTML, CSS et JavaScript que l'on peut héberger tels quels.
@@ -39,7 +42,7 @@ Tout ce qui suit est du contenu de démonstration. Il faut le remplacer.
 | Avis clients (noms et témoignages fictifs) | `assets/js/data.js` → `BI.avis`, et la section « Ce qu'en disent les propriétaires » dans `index.html` |
 | Chiffres mis en avant (180 maisons, 9,4/10, etc.) | `index.html`, `a-propos.html`, `assets/js/data.js` → `BI.chiffres` |
 | Chantiers de démonstration (codes `BI-2026-014` et `BI-2026-031`) | `assets/js/data.js` → `BI.chantiers` |
-| Illustrations des modèles et vignettes de chantier | `assets/img/modeles/`, `assets/img/chantier/` — à remplacer par de vraies photos |
+| Dessins des modèles et vignettes de chantier | `assets/img/plans/`, `assets/img/axo/`, `assets/img/chantier/` — les plans et axonométries sont des dessins génériques, à remplacer par les vôtres |
 | Taux de change du dollar et du dollar canadien | `assets/js/data.js` → `BI.devises` (l'euro est fixe, arrimé au franc CFA) |
 | Prix indicatifs des terrains et coûts au m² | `assets/js/data.js` → `BI.zones` et `BI.finitions` |
 
@@ -67,7 +70,9 @@ contact.html          formulaire et coordonnées
 404.html              page d'erreur
 
 assets/css/style.css  design system complet (jetons, composants, thème sombre)
-assets/img/           illustrations SVG, favicon, image de partage
+assets/img/plans/     plans du rez-de-chaussée des 12 modèles (SVG)
+assets/img/axo/       axonométries au trait des 12 modèles (SVG)
+assets/img/chantier/  vignettes de chantier pour la démonstration du suivi
 assets/js/
   icons.js            103 icônes SVG injectées dans la page
   data.js             TOUT le contenu éditorial et tous les chiffres
@@ -103,21 +108,35 @@ pour que le site reste lisible sans JavaScript et correctement indexé.
 
 ---
 
-## Conception
+## Direction artistique
 
-**Couleurs** — sable, beige et brun, avec une terre cuite en accent et une
-pointe de laiton. Les couleurs sont des variables CSS définies une seule fois
-dans `:root`, et redéfinies pour le thème sombre. Aucun composant ne code une
-couleur en dur.
+Le parti pris est celui d'un atelier d'architecture : papier blanc cassé,
+typographie large, dessin technique plutôt que photographie, filets d'un pixel
+plutôt qu'ombres portées.
+
+**Couleurs** — un papier blanc cassé en base, une encre presque noire, une
+terre cuite en accent, et deux matières utilisées en bandeaux pleine largeur :
+le sable et le brun profond. Chaque bandeau redéfinit localement ses rôles de
+texte (`--ink-soft`, `--ink-mute`, `--hair`, `--accent`), si bien qu'un
+composant posé dessus reste lisible sans règle dédiée.
 
 **Thème sombre** — suit les réglages du système, avec un bouton de bascule
 mémorisé dans le navigateur.
 
-**Typographie** — Fraunces pour les titres, Plus Jakarta Sans pour le texte,
-servies par Google Fonts avec des polices système en repli.
+**Typographie** — Inter Tight pour les titres et le texte, IBM Plex Mono pour
+les libellés, les cotes, les chiffres et les index de section. Ce couple
+grotesque plus monospace est la langue des agences d'architecture, et il donne
+au site sa lecture technique.
 
-**Icônes** — 103 icônes SVG au trait, injectées en une fois par `icons.js`.
-Aucune requête réseau, aucune bibliothèque externe.
+**Dessins** — pas de photographie. Chaque modèle est représenté par un plan du
+rez-de-chaussée coté (murs, portes avec leur débattement, fenêtres, surfaces,
+cotes, orientation) et par une axonométrie au trait. Les deux séries sont
+générées et restent modifiables dans `assets/img/plans/` et `assets/img/axo/`.
+Les emplacements sont prêts à recevoir de vraies photos le jour où vous en
+aurez.
+
+**Icônes** — 103 icônes SVG au trait, injectées en une fois par `icons.js`,
+utilisées avec parcimonie. Aucune requête réseau, aucune bibliothèque externe.
 
 **Accessibilité** — contrastes vérifiés au niveau AA sur toutes les pages et
 dans les deux thèmes, hiérarchie de titres continue, champs de formulaire tous
@@ -125,5 +144,5 @@ dans les deux thèmes, hiérarchie de titres continue, champs de formulaire tous
 `prefers-reduced-motion`.
 
 **Performance** — pas de framework, pas de bibliothèque, images en SVG
-(quelques kilo-octets chacune), chargement différé des illustrations. Pensé
-pour tenir sur une connexion mobile moyenne.
+(quelques kilo-octets chacune), chargement différé des dessins. Pensé pour
+tenir sur une connexion mobile moyenne.

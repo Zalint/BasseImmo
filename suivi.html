@@ -6,8 +6,8 @@
 <title>Suivi de chantier en ligne | Basse Immo</title>
 <meta name="description" content="Suivez votre chantier au Sénégal depuis l'étranger : photos horodatées chaque semaine, avancement par phase, dépenses engagées et rapport du conducteur de travaux.">
 <link rel="canonical" href="https://basseimmo.sn/suivi.html">
-<meta name="theme-color" content="#A25C2C" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#1A120C" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FAF8F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141210" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Basse Immo">
 <meta property="og:locale" content="fr_SN">
@@ -17,10 +17,9 @@
 <meta property="og:image" content="https://basseimmo.sn/assets/img/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="assets/css/style.css">
 <script>
 /* Applique le thème enregistré avant le premier rendu, pour éviter un flash clair. */
@@ -32,10 +31,10 @@
 <header class="header">
   <div class="container header__inner">
     <a class="brand" href="index.html" aria-label="Basse Immo, accueil">
-      <span class="brand__mark"><svg class="ico" aria-hidden="true"><use href="#i-villa"></use></svg></span>
-      <span class="brand__text">
+      <span class="brand__mark"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M16 4 28 11 16 18 4 11z"/><path d="M4 11v10l12 7V18"/><path d="M28 11v10l-12 7"/></svg></span>
+      <span>
         <span class="brand__name">Basse Immo</span>
-        <span class="brand__tag">Construire au Sénégal</span>
+        <span class="brand__tag">Atelier de construction · Dakar</span>
       </span>
     </a>
 
@@ -46,11 +45,11 @@
         <li><a class="nav__link" href="services.html">Services</a></li>
         <li><a class="nav__link" href="suivi.html">Suivi de chantier</a></li>
         <li><a class="nav__link" href="guide.html">Guide</a></li>
-        <li><a class="nav__link" href="a-propos.html">À propos</a></li>
+        <li><a class="nav__link" href="a-propos.html">Atelier</a></li>
       </ul>
       <div class="nav__mobile-cta">
         <a class="btn btn--wa" data-wa="Bonjour Basse Immo, je souhaite échanger sur mon projet." href="#"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"></use></svg> Écrire sur WhatsApp</a>
-        <a class="btn btn--ghost" href="contact.html">Demander un devis</a>
+        <a class="btn btn--line" href="contact.html">Demander un devis</a>
       </div>
     </nav>
 
@@ -59,7 +58,7 @@
         <svg class="ico ico--sun" aria-hidden="true"><use href="#i-sun"></use></svg>
         <svg class="ico ico--moon" aria-hidden="true"><use href="#i-moon"></use></svg>
       </button>
-      <a class="btn btn--sm header__cta" href="contact.html"><svg class="ico" aria-hidden="true"><use href="#i-file-text"></use></svg> Devis gratuit</a>
+      <a class="btn btn--sm header__cta" href="contact.html">Devis gratuit <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
       <button class="burger" type="button" data-burger aria-expanded="false" aria-controls="nav-principal" aria-label="Ouvrir le menu"><svg class="ico" aria-hidden="true"><use href="#i-menu"></use></svg></button>
     </div>
   </div>
@@ -69,7 +68,7 @@
 <section class="page-head">
   <div class="container">
     <ol class="crumbs"><li><a href="index.html">Accueil</a></li><li aria-current="page">Suivi de chantier</li></ol>
-    <h1>Votre chantier, semaine après semaine</h1>
+    <p class="label label--accent" style="margin-bottom:1rem">Espace client</p><h1>Votre chantier, semaine après semaine</h1>
     <p>Entrez le code figurant sur votre contrat pour accéder à l'espace de votre chantier. Vous pouvez aussi ouvrir une démonstration pour voir exactement ce que reçoivent nos clients.</p>
   </div>
 </section>
@@ -77,20 +76,26 @@
 <section class="section section--tight">
   <div class="container">
 
-    <div class="card" style="max-width:640px;margin-inline:auto;padding:1.8rem" data-reveal>
-      <form id="form-code" novalidate>
-        <div class="field">
-          <label for="code">Code de chantier</label>
-          <input class="input" id="code" name="code" type="text" placeholder="BI-2026-014" autocomplete="off" spellcheck="false" aria-describedby="code-aide">
-          <p class="field__hint" id="code-aide">Il figure en haut de votre contrat et dans chaque rapport hebdomadaire.</p>
+    <div class="grid12">
+      <div class="c5">
+        <form id="form-code" novalidate>
+          <div class="field">
+            <label for="code">Code de chantier</label>
+            <input class="input" id="code" name="code" type="text" placeholder="BI-2026-014" autocomplete="off" spellcheck="false" aria-describedby="code-aide">
+            <p class="field__hint" id="code-aide">Il figure en haut de votre contrat et dans chaque rapport hebdomadaire.</p>
+          </div>
+          <p id="code-erreur" role="alert" style="display:none;color:var(--clay);font-size:.9rem;font-weight:550;margin:0 0 .9rem"></p>
+          <button class="btn btn--block" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-lock"></use></svg> Ouvrir mon espace</button>
+        </form>
+      </div>
+      <div class="c6 start7">
+        <p class="label" style="margin-bottom:.9rem">Pas encore client&nbsp;?</p>
+        <p style="color:var(--ink-soft)">Ouvrez l'une des deux démonstrations pour voir exactement ce que reçoit un client chaque semaine.</p>
+        <div class="row" style="margin-top:1.2rem">
+          <button class="chip" type="button" data-demo="BI-2026-014">Villa R+1 · Keur Massar</button>
+          <button class="chip" type="button" data-demo="BI-2026-031">Maison bioclimatique · Thiès</button>
         </div>
-        <p id="code-erreur" role="alert" style="display:none;color:var(--brick-500);font-size:.9rem;font-weight:600;margin:0 0 .8rem"></p>
-        <button class="btn btn--block" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-lock"></use></svg> Ouvrir mon espace</button>
-      </form>
-      <p style="margin-top:1.2rem;font-size:.9rem;color:var(--text-mute);text-align:center">
-        Pas encore client&nbsp;? <button class="chip" type="button" data-demo="BI-2026-014" style="margin:0 .2rem">Démonstration&nbsp;: villa R+1</button>
-        <button class="chip" type="button" data-demo="BI-2026-031" style="margin:0 .2rem">Démonstration&nbsp;: maison bioclimatique</button>
-      </p>
+      </div>
     </div>
 
     <div id="tableau-bord" hidden></div>
@@ -98,39 +103,51 @@
   </div>
 </section>
 
-<section class="section section--alt">
+<section class="section section--paper2">
   <div class="container">
-    <div class="section-head section-head--center">
-      <p class="eyebrow">Pourquoi c'est utile</p>
-      <h2>Construire de loin sans perdre le fil</h2>
+  <div class="shead shead--split">
+    <div class="shead__top"><span class="idx">—</span><span class="label">Pourquoi c'est utile</span></div>
+    <div><h2>Construire de loin sans perdre le fil</h2></div>
+    <div>
     </div>
-    <div class="grid grid--3">
-      <div class="card" data-reveal>
-        <span class="icon-badge"><svg class="ico" aria-hidden="true"><use href="#i-camera"></use></svg></span>
-        <h3 style="margin-top:1rem">Des preuves, pas des promesses</h3>
-        <p>Les photos sont horodatées et publiées chaque vendredi. Vous voyez le chantier tel qu'il est, pas tel qu'on vous le raconte.</p>
+  </div>
+    <div class="entries">
+      <div class="entry" data-reveal>
+        <span class="entry__idx">01</span>
+        <h3 class="entry__title">Des preuves, pas des promesses</h3>
+        <p class="entry__desc">Les photos sont horodatées et publiées chaque vendredi. Vous voyez le chantier tel qu'il est, pas tel qu'on vous le raconte.</p>
+        <span></span>
       </div>
-      <div class="card" data-reveal>
-        <span class="icon-badge icon-badge--gold"><svg class="ico" aria-hidden="true"><use href="#i-wallet"></use></svg></span>
-        <h3 style="margin-top:1rem">L'argent suivi à l'euro près</h3>
-        <p>Chaque somme engagée est rapprochée du budget voté. Vous savez ce qui a été dépensé, sur quel poste, et ce qui reste.</p>
+      <div class="entry" data-reveal>
+        <span class="entry__idx">02</span>
+        <h3 class="entry__title">L'argent suivi au franc près</h3>
+        <p class="entry__desc">Chaque somme engagée est rapprochée du budget voté. Vous savez ce qui a été dépensé, sur quel poste, et ce qui reste.</p>
+        <span></span>
       </div>
-      <div class="card" data-reveal>
-        <span class="icon-badge icon-badge--leaf"><svg class="ico" aria-hidden="true"><use href="#i-video"></use></svg></span>
-        <h3 style="margin-top:1rem">Une visite quand vous voulez</h3>
-        <p>Le conducteur de travaux se rend sur site en visioconférence avec vous, sur rendez-vous, pour que vous voyiez de vos yeux.</p>
+      <div class="entry" data-reveal>
+        <span class="entry__idx">03</span>
+        <h3 class="entry__title">Une visite quand vous voulez</h3>
+        <p class="entry__desc">Le conducteur de travaux se rend sur site en visioconférence avec vous, sur rendez-vous, pour que vous voyiez de vos yeux.</p>
+        <span></span>
       </div>
     </div>
   </div>
 </section>
-<section class="section">
+<section class="section plate plate--clay">
   <div class="container">
-    <div class="cta-band" data-reveal>
-      <h2>Votre chantier mérite la même transparence</h2>
-      <p>Tous nos clients disposent de cet espace, sans supplément. C'est notre façon de travailler, pas une option.</p>
-      <div class="cluster cluster--center">
-        <a class="btn btn--lg" href="contact.html"><svg class="ico" aria-hidden="true"><use href="#i-send"></use></svg> Demander un devis gratuit</a>
-        <a class="btn btn--lg btn--wa" data-wa="Bonjour Basse Immo, je souhaite parler de mon projet." href="#"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"></use></svg> Parler sur WhatsApp</a>
+    <div class="shead shead--split" style="margin-bottom:0">
+      <div class="shead__top">
+        <span class="label">Prochaine étape</span>
+      </div>
+      <div>
+        <h2>Votre chantier mérite la même transparence</h2>
+      </div>
+      <div>
+        <p class="shead__lead" style="margin-bottom:1.8rem">Tous nos clients disposent de cet espace, sans supplément. C'est notre façon de travailler, pas une option.</p>
+        <div class="row">
+          <a class="btn" href="contact.html">Demander un devis gratuit <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+          <a class="btn btn--line" data-wa="Bonjour Basse Immo, je souhaite parler de mon projet." href="#"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"></use></svg> WhatsApp</a>
+        </div>
       </div>
     </div>
   </div>
@@ -146,10 +163,10 @@
     <div class="footer__grid">
       <div>
         <a class="brand" href="index.html">
-          <span class="brand__mark"><svg class="ico" aria-hidden="true"><use href="#i-villa"></use></svg></span>
-          <span class="brand__text">
+          <span class="brand__mark"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M16 4 28 11 16 18 4 11z"/><path d="M4 11v10l12 7V18"/><path d="M28 11v10l-12 7"/></svg></span>
+          <span>
             <span class="brand__name">Basse Immo</span>
-            <span class="brand__tag">Construire au Sénégal</span>
+            <span class="brand__tag">Atelier de construction · Dakar</span>
           </span>
         </a>
         <p class="footer__about">Conception, construction et suivi de maisons au Sénégal. Un devis clair, un chantier que vous suivez en ligne, des clés remises à la date convenue.</p>
@@ -163,11 +180,11 @@
 
       <div>
         <h2>Explorer</h2>
-        <ul><li><a href="modeles.html">Modèles</a></li><li><a href="simulateur.html">Simulateur</a></li><li><a href="services.html">Services</a></li><li><a href="suivi.html">Suivi de chantier</a></li><li><a href="guide.html">Guide</a></li><li><a href="a-propos.html">À propos</a></li></ul>
+        <ul><li><a href="modeles.html">Modèles</a></li><li><a href="simulateur.html">Simulateur</a></li><li><a href="services.html">Services</a></li><li><a href="suivi.html">Suivi de chantier</a></li><li><a href="guide.html">Guide</a></li><li><a href="a-propos.html">Atelier</a></li></ul>
       </div>
 
       <div>
-        <h2>Nos services</h2>
+        <h2>Prestations</h2>
         <ul>
           <li><a href="services.html#cle-en-main">Construction clé en main</a></li>
           <li><a href="services.html#foncier">Vérification du terrain</a></li>
@@ -186,13 +203,13 @@
           <li><svg class="ico" aria-hidden="true"><use href="#i-mail"></use></svg><a data-href="email" href="#"><span data-bi="email"></span></a></li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-clock"></use></svg><span data-bi="horaires"></span></li>
         </ul>
-        <a class="btn btn--wa btn--sm" style="margin-top:1rem" data-wa="Bonjour Basse Immo, je souhaite des informations." href="#"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"></use></svg> WhatsApp</a>
+        <a class="btn btn--wa btn--sm" style="margin-top:1.2rem" data-wa="Bonjour Basse Immo, je souhaite des informations." href="#"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"></use></svg> WhatsApp</a>
       </div>
     </div>
 
     <div class="footer__bottom">
-      <p>© <span data-bi="annee"></span> Basse Immo. Tous droits réservés.</p>
-      <p>Les montants affichés sur ce site sont des estimations indicatives, hors terrain et hors taxes.</p>
+      <p>© <span data-bi="annee"></span> Basse Immo</p>
+      <p>Montants indicatifs, hors terrain et hors taxes</p>
     </div>
   </div>
 </footer>
