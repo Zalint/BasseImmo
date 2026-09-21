@@ -54,7 +54,7 @@
         '<nav class="c3" aria-label="Sommaire de l\'article">' +
           '<div style="position:sticky;top:calc(var(--header-h) + 24px)">' +
             '<p class="label" style="margin-bottom:.8rem">Sommaire</p>' +
-            '<ol class="mono" style="margin:0;padding-left:1.2rem;font-size:.82rem;line-height:1.7;color:var(--ink-soft)">' + sommaire + '</ol>' +
+            '<ol class="toc">' + sommaire + '</ol>' +
           '</div>' +
         '</nav>' +
         '<div class="c8 start5">' +

@@ -45,7 +45,7 @@
     }).join('');
 
     var rapports = c.rapports.map(function (r) {
-      return '<div style="padding:1.2rem 0;border-bottom:1px solid var(--hair)">' +
+      return '<div style="padding:1.1rem 0;border-bottom:1px solid var(--line)">' +
         '<p class="label" style="margin-bottom:.5rem">' + BI.escape(r.date) + ' · ' + BI.escape(c.conducteur) + '</p>' +
         '<p style="margin:0;color:var(--ink-soft);font-size:.95rem">' + BI.escape(r.texte) + '</p>' +
       '</div>';
@@ -56,12 +56,12 @@
     };
 
     return '' +
-    '<div style="margin-top:3rem;border-top:1px solid var(--hair);padding-top:2rem">' +
+    '<div class="dash">' +
       '<div class="row row--between" style="align-items:flex-start;margin-bottom:1.6rem">' +
         '<div>' +
           '<p class="label label--accent" style="margin-bottom:.5rem">Chantier ' + BI.escape(c.code) + '</p>' +
           '<h2 style="margin-bottom:.3rem">' + BI.escape(c.modele) + '</h2>' +
-          '<p class="mono" style="font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute)">' +
+          '<p class="fine">' +
             BI.escape(c.client) + ' · ' + BI.escape(c.lieu) + ' · ' + c.surface + ' m²</p>' +
         '</div>' +
         '<button class="btn btn--line btn--sm" type="button" id="fermer">' + BI.icone('close') + ' Fermer</button>' +
@@ -69,7 +69,7 @@
 
       '<div class="row row--between" style="align-items:baseline;margin-bottom:.6rem">' +
         '<span class="label">Avancement global</span>' +
-        '<span class="mono" style="font-size:2.4rem;font-weight:500;letter-spacing:-.05em;color:var(--accent)">' + c.avancement + '&nbsp;%</span>' +
+        '<span class="widget__pct" style="color:var(--brand-text)">' + c.avancement + '&nbsp;%</span>' +
       '</div>' +
       '<div class="progress" role="img" aria-label="Avancement global : ' + c.avancement + ' pour cent"><i style="width:' + c.avancement + '%"></i></div>' +
 
@@ -90,10 +90,10 @@
         '<div class="c6">' +
           '<h3 class="label label--accent" style="margin-bottom:1.2rem">Photos de la semaine</h3>' +
           '<div class="photo-grid">' + photos + '</div>' +
-          '<p class="mono" style="font-size:.68rem;color:var(--ink-mute);margin-top:.9rem;line-height:1.6">Démonstration : ces vignettes sont des illustrations. Sur un vrai chantier, ce sont les photos horodatées du conducteur de travaux.</p>' +
+          '<p class="fine" style="margin-top:.9rem">Démonstration : ces vignettes sont des illustrations. Sur un vrai chantier, ce sont les photos horodatées du conducteur de travaux.</p>' +
 
           '<h3 class="label label--accent" style="margin:2.4rem 0 .6rem">Rapports hebdomadaires</h3>' +
-          '<div style="border-top:1px solid var(--hair)">' + rapports + '</div>' +
+          '<div style="border-top:1px solid var(--line)">' + rapports + '</div>' +
 
           '<h3 class="label label--accent" style="margin:2.4rem 0 .8rem">Visiter le chantier en visio</h3>' +
           '<p style="color:var(--ink-soft);font-size:.95rem">Le conducteur de travaux se rend sur site avec vous en visioconférence, sur rendez-vous, du lundi au samedi.</p>' +

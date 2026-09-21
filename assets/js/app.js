@@ -11,7 +11,9 @@
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
   BI.$ = $; BI.$$ = $$;
 
-  var NBSP = ' '; // espace fine insécable
+  // Espace insécable. L'espace fine (U+202F) est si étroite dans la police du site
+  // qu'elle disparaît dans les titres resserrés : « 67,9MFCFA ».
+  var NBSP = '\u00A0';
 
   BI.fmt = function (n) {
     if (!isFinite(n)) return '—';
@@ -71,22 +73,23 @@
     set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) { /* sans effet */ } }
   };
 
-  /* ---------- thème clair / sombre ---------- */
+  /* ---------- thème : clair par défaut, sombre seulement sur demande ---------- */
   function initTheme() {
-    var saved = BI.store.get('bi-theme');
-    if (saved === 'dark' || saved === 'light') {
-      document.documentElement.setAttribute('data-theme', saved);
+    var barre = $('meta[name="theme-color"]');
+    var boutons = $$('[data-theme-toggle]');
+    function appliquer(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      if (barre) barre.setAttribute('content', theme === 'dark' ? '#070B17' : '#FFFFFF');
+      boutons.forEach(function (btn) { btn.setAttribute('aria-pressed', String(theme === 'dark')); });
     }
-    $$('[data-theme-toggle]').forEach(function (btn) {
+    // Les réglages du système sont ignorés : seul un choix fait ici active le thème sombre.
+    appliquer(BI.store.get('bi-theme') === 'dark' ? 'dark' : 'light');
+    boutons.forEach(function (btn) {
+      btn.setAttribute('aria-label', 'Thème sombre');
       btn.addEventListener('click', function () {
-        var courant = document.documentElement.getAttribute('data-theme');
-        if (!courant) {
-          courant = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        }
-        var suivant = courant === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', suivant);
+        var suivant = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        appliquer(suivant);
         BI.store.set('bi-theme', suivant);
-        btn.setAttribute('aria-label', suivant === 'dark' ? 'Passer en thème clair' : 'Passer en thème sombre');
       });
     });
   }
@@ -97,20 +100,74 @@
     var nav = $('#nav-principal');
     if (!burger || !nav) return;
 
+    function estOuvert() { return nav.classList.contains('is-open'); }
     function fermer() {
       nav.classList.remove('is-open');
       burger.setAttribute('aria-expanded', 'false');
+      burger.setAttribute('aria-label', 'Ouvrir le menu');
       burger.innerHTML = BI.icone('menu');
     }
     burger.addEventListener('click', function () {
       var ouvert = nav.classList.toggle('is-open');
       burger.setAttribute('aria-expanded', String(ouvert));
+      burger.setAttribute('aria-label', ouvert ? 'Fermer le menu' : 'Ouvrir le menu');
       burger.innerHTML = BI.icone(ouvert ? 'close' : 'menu');
     });
     nav.addEventListener('click', function (e) { if (e.target.closest('a')) fermer(); });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') fermer(); });
-    window.addEventListener('resize', function () { if (window.innerWidth > 900) fermer(); });
+    // Un clic hors du panneau le referme, comme une feuille d'application.
+    document.addEventListener('click', function (e) {
+      if (estOuvert() && !nav.contains(e.target) && !burger.contains(e.target)) fermer();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && estOuvert()) { fermer(); burger.focus(); }
+    });
+    window.addEventListener('resize', function () { if (window.innerWidth > 940) fermer(); });
   }
+
+  /* ---------- typographie française ----------
+     Une espace ordinaire avant « : ; ? ! % » ou après « laisse le navigateur couper
+     la ligne au mauvais endroit (« délibération / : ce que… »). On la rend insécable,
+     y compris dans le contenu dessiné plus tard par les scripts de page. */
+  var AVANT_PONCTUATION = / ([:;?!»%])/g;
+  function typographierTexte(n) {
+    var t = n.nodeValue;
+    if (t.indexOf(' ') < 0) return;
+    var v = t.replace(AVANT_PONCTUATION, NBSP + '$1').replace(/« /g, '«' + NBSP);
+    if (v !== t) n.nodeValue = v;
+  }
+  function typographier(racine) {
+    if (racine.nodeType === 3) { typographierTexte(racine); return; }
+    if (racine.nodeType !== 1 || /^(SCRIPT|STYLE|TEXTAREA)$/.test(racine.nodeName)) return;
+    var marcheur = document.createTreeWalker(racine, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) {
+        return /^(SCRIPT|STYLE|TEXTAREA)$/.test(n.parentNode.nodeName) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var n;
+    while ((n = marcheur.nextNode())) typographierTexte(n);
+  }
+  function initTypo() {
+    typographier(document.body);
+    if (!('MutationObserver' in window)) return;
+    new MutationObserver(function (changements) {
+      changements.forEach(function (c) {
+        Array.prototype.forEach.call(c.addedNodes, function (n) { typographier(n); });
+      });
+    }).observe(document.body, { childList: true, subtree: true });
+  }
+
+  /* ---------- curseurs : la partie parcourue se colore ---------- */
+  function remplirCurseur(el) {
+    var min = Number(el.min) || 0, max = Number(el.max) || 100;
+    var p = max > min ? (Number(el.value) - min) / (max - min) * 100 : 0;
+    el.style.setProperty('--p', p.toFixed(2) + '%');
+  }
+  BI.remplirCurseurs = function (racine) {
+    $$('input[type="range"]', racine || document).forEach(remplirCurseur);
+  };
+  document.addEventListener('input', function (e) {
+    if (e.target.matches && e.target.matches('input[type="range"]')) remplirCurseur(e.target);
+  });
 
   /* ---------- en-tête collant ---------- */
   function initHeader() {
@@ -137,10 +194,12 @@
       return;
     }
     var io = new IntersectionObserver(function (entrees) {
+      // Les éléments qui entrent ensemble apparaissent en cascade, 60 ms d'écart.
+      var rang = 0;
       entrees.forEach(function (e) {
         if (!e.isIntersecting) return;
-        var i = parseInt(e.target.getAttribute('data-reveal-delay') || '0', 10);
-        setTimeout(function () { e.target.classList.add('is-in'); }, i);
+        e.target.style.setProperty('--reveal-delay', Math.min(rang++, 6) * 60 + 'ms');
+        e.target.classList.add('is-in');
         io.unobserve(e.target);
       });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
@@ -229,8 +288,11 @@
     initContactSlots();
     initCurrentNav();
     BI.initAccordion();
-    initReveal();
     document.dispatchEvent(new CustomEvent('bi:ready'));
+    // Après les scripts de page : ils ont pu ajouter du texte, des curseurs et des blocs animés.
+    initTypo();
+    BI.remplirCurseurs();
+    initReveal();
   }
 
   if (document.readyState === 'loading') {

@@ -1,27 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-label="Axonométrie du modèle Teranga">
-<defs><pattern id="sol" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v10" stroke="#A79C8D" stroke-width=".8" opacity=".5"/></pattern></defs>
-<rect width="900" height="700" fill="#FAF8F4"/>
-<path d="M407.14 231.97 L784.31 449.73 L492.86 618.0 L115.69 400.24 Z" fill="url(#sol)" stroke="#D8D0C4" stroke-width="1.3" stroke-linejoin="round"/>
-<path d="M218.55 400.24 L492.86 558.61 L492.86 497.24 L218.55 338.87 Z" fill="#E2D9CA" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M681.45 449.73 L492.86 558.61 L492.86 497.24 L681.45 388.36 Z" fill="#F0EAE0" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M407.14 229.99 L681.45 388.36 L492.86 497.24 L218.55 338.87 Z" fill="#FBF9F5" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/>
-<path d="M256.41 403.29 L290.42 422.93 L290.42 394.22 L256.41 374.58 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M311.27 434.96 L345.28 454.6 L345.28 425.9 L311.27 406.26 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M366.13 466.64 L400.14 486.28 L400.14 457.57 L366.13 437.93 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M420.99 498.31 L455.01 517.95 L455.01 489.24 L420.99 469.61 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M637.44 456.33 L599.73 478.11 L599.73 449.4 L637.44 427.63 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M574.58 492.62 L536.86 514.4 L536.86 485.69 L574.58 463.92 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M218.55 338.87 L492.86 497.24 L492.86 435.87 L218.55 277.5 Z" fill="#E2D9CA" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M681.45 388.36 L492.86 497.24 L492.86 435.87 L681.45 326.99 Z" fill="#F0EAE0" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M407.14 168.62 L681.45 326.99 L492.86 435.87 L218.55 277.5 Z" fill="#FBF9F5" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/>
-<path d="M256.41 341.92 L290.42 361.56 L290.42 332.85 L256.41 313.22 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M311.27 373.59 L345.28 393.23 L345.28 364.53 L311.27 344.89 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M366.13 405.27 L400.14 424.91 L400.14 396.2 L366.13 376.56 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M420.99 436.94 L455.01 456.58 L455.01 427.88 L420.99 408.24 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M637.44 394.96 L599.73 416.74 L599.73 388.03 L637.44 366.26 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M574.58 431.25 L536.86 453.03 L536.86 424.33 L574.58 402.55 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M208.27 277.5 L492.86 441.81 L492.86 432.9 L208.27 268.59 Z" fill="#DED4C3" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/><path d="M691.73 326.99 L492.86 441.81 L492.86 432.9 L691.73 318.09 Z" fill="#EBE4D8" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/><path d="M407.14 153.78 L691.73 318.09 L492.86 432.9 L208.27 268.59 Z" fill="#F7F3EC" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/>
-<path d="M407.14 177.53 L650.59 318.09 L492.86 409.15 L249.41 268.59 Z" fill="none" stroke="#6E6459" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M249.41 268.59L492.86 409.15" stroke="#A79C8D" stroke-width="1" opacity=".5" stroke-dasharray="4 4"/>
-<path d="M167.12 429.93L441.43 588.31" stroke="#6E6459" stroke-width="1"/>
-<text x="304.27" y="529.12" text-anchor="middle" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="12" fill="#6E6459">16.0 m</text>
-<text x="34" y="46" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="13" font-weight="600" fill="#1A1713" letter-spacing=".16em">TERANGA</text>
-<text x="34" y="66" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="11.5" fill="#6E6459" letter-spacing=".06em">AXONOMÉTRIE · VILLA FAMILIALE R+1</text>
-<path d="M34 78h150" stroke="#D8D0C4" stroke-width="1"/>
+<defs><pattern id="sol" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v10" stroke="#9AA8C0" stroke-width=".8" opacity=".5"/></pattern></defs>
+<path d="M407.14 231.97 L784.31 449.73 L492.86 618.0 L115.69 400.24 Z" fill="url(#sol)" stroke="#D3DCEA" stroke-width="1.3" stroke-linejoin="round"/>
+<path d="M218.55 400.24 L492.86 558.61 L492.86 497.24 L218.55 338.87 Z" fill="#D8E2F3" stroke="#14213D" stroke-width="1.9" stroke-linejoin="round"/><path d="M681.45 449.73 L492.86 558.61 L492.86 497.24 L681.45 388.36 Z" fill="#EEF3FB" stroke="#14213D" stroke-width="1.9" stroke-linejoin="round"/><path d="M407.14 229.99 L681.45 388.36 L492.86 497.24 L218.55 338.87 Z" fill="#FFFFFF" stroke="#14213D" stroke-width="1.9" stroke-linejoin="round"/>
+<path d="M256.41 403.29 L290.42 422.93 L290.42 394.22 L256.41 374.58 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M311.27 434.96 L345.28 454.6 L345.28 425.9 L311.27 406.26 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M366.13 466.64 L400.14 486.28 L400.14 457.57 L366.13 437.93 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M420.99 498.31 L455.01 517.95 L455.01 489.24 L420.99 469.61 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M637.44 456.33 L599.73 478.11 L599.73 449.4 L637.44 427.63 Z" fill="#F5C46B" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M574.58 492.62 L536.86 514.4 L536.86 485.69 L574.58 463.92 Z" fill="#F5C46B" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M218.55 338.87 L492.86 497.24 L492.86 435.87 L218.55 277.5 Z" fill="#D8E2F3" stroke="#14213D" stroke-width="1.9" stroke-linejoin="round"/><path d="M681.45 388.36 L492.86 497.24 L492.86 435.87 L681.45 326.99 Z" fill="#EEF3FB" stroke="#14213D" stroke-width="1.9" stroke-linejoin="round"/><path d="M407.14 168.62 L681.45 326.99 L492.86 435.87 L218.55 277.5 Z" fill="#FFFFFF" stroke="#14213D" stroke-width="1.9" stroke-linejoin="round"/>
+<path d="M256.41 341.92 L290.42 361.56 L290.42 332.85 L256.41 313.22 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M311.27 373.59 L345.28 393.23 L345.28 364.53 L311.27 344.89 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M366.13 405.27 L400.14 424.91 L400.14 396.2 L366.13 376.56 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M420.99 436.94 L455.01 456.58 L455.01 427.88 L420.99 408.24 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M637.44 394.96 L599.73 416.74 L599.73 388.03 L637.44 366.26 Z" fill="#F5C46B" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M574.58 431.25 L536.86 453.03 L536.86 424.33 L574.58 402.55 Z" fill="#F5C46B" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M208.27 277.5 L492.86 441.81 L492.86 432.9 L208.27 268.59 Z" fill="#D0DBEE" stroke="#14213D" stroke-width="1.4" stroke-linejoin="round"/><path d="M691.73 326.99 L492.86 441.81 L492.86 432.9 L691.73 318.09 Z" fill="#E3EAF6" stroke="#14213D" stroke-width="1.4" stroke-linejoin="round"/><path d="M407.14 153.78 L691.73 318.09 L492.86 432.9 L208.27 268.59 Z" fill="#F4F7FC" stroke="#14213D" stroke-width="1.4" stroke-linejoin="round"/>
+<path d="M407.14 177.53 L650.59 318.09 L492.86 409.15 L249.41 268.59 Z" fill="none" stroke="#5E6B82" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M249.41 268.59L492.86 409.15" stroke="#9AA8C0" stroke-width="1" opacity=".5" stroke-dasharray="4 4"/>
+<path d="M167.12 429.93L441.43 588.31" stroke="#5E6B82" stroke-width="1"/>
+<text x="304.27" y="529.12" text-anchor="middle" font-family="Figtree,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#5E6B82">16.0 m</text>
+<text x="34" y="46" font-family="Figtree,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#14213D" letter-spacing=".16em">TERANGA</text>
+<text x="34" y="66" font-family="Figtree,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#5E6B82" letter-spacing=".06em">AXONOMÉTRIE · VILLA FAMILIALE R+1</text>
+<path d="M34 78h150" stroke="#D3DCEA" stroke-width="1"/>
 </svg>

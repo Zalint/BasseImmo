@@ -111,12 +111,12 @@
             '</figure>' +
           '</div>' +
           '<aside class="c4">' +
-            '<div style="position:sticky;top:calc(var(--header-h) + 20px)">' +
+            '<div class="card" style="position:sticky;top:calc(var(--header-h) + 20px)">' +
               '<p class="label" style="margin-bottom:.6rem">Budget construction</p>' +
               '<p class="bigprice">' + BI.fourchette(b.min, b.max) + '</p>' +
-              '<p class="mono" style="font-size:.74rem;color:var(--ink-mute);margin:.6rem 0 1rem;letter-spacing:.04em">' +
-                'HORS TERRAIN · ' + BI.fmt(Math.round(b.min / m.surface / 1000) * 1000) + ' À ' +
-                BI.fmt(Math.round(b.max / m.surface / 1000) * 1000) + ' FCFA/M²</p>' +
+              '<p class="fine" style="margin:.6rem 0 1rem">' +
+                'Hors terrain · ' + BI.fmt(Math.round(b.min / m.surface / 1000) * 1000) + ' à ' +
+                BI.fmt(Math.round(b.max / m.surface / 1000) * 1000) + ' FCFA/m²</p>' +
               '<div class="sim__fx" style="margin-bottom:1.6rem">' +
                 ['EUR', 'USD'].map(function (d) {
                   return '<span class="tag">' + BI.enDevise(b.min, d) + ' – ' + BI.enDevise(b.max, d) + '</span>';
@@ -128,7 +128,7 @@
                 '<a class="btn btn--wa btn--block" data-wa="Bonjour Basse Immo, je suis intéressé par le modèle ' + m.nom + ' (' + m.surface + ' m²). Pouvez-vous m\'envoyer le dossier complet ?" href="#">' + BI.icone('whatsapp') + ' En parler sur WhatsApp</a>' +
                 '<a class="btn btn--line btn--block" href="simulateur.html?type=' + m.type + '&surface=' + m.surface + '&finition=' + m.standing + '&parcelle=' + m.parcelle + '">Adapter le budget</a>' +
               '</div>' +
-              '<p class="mono" style="font-size:.68rem;color:var(--ink-mute);margin-top:1rem;line-height:1.6">Estimation indicative. Le devis définitif tient compte de votre parcelle.</p>' +
+              '<p class="fine" style="margin-top:1rem">Estimation indicative. Le devis définitif tient compte de votre parcelle.</p>' +
             '</div>' +
           '</aside>' +
         '</div>' +
@@ -170,15 +170,15 @@
             '<ul class="checklist">' + NON_COMPRIS.map(function (c) {
               return '<li><span style="color:var(--ink-mute);display:flex">' + BI.icone('plus') + '</span> ' + c + '</li>';
             }).join('') + '</ul>' +
-            '<p class="mono" style="font-size:.72rem;color:var(--ink-mute);margin-top:1.2rem;line-height:1.6">Le simulateur chiffre chacun de ces postes.</p>' +
+            '<p class="fine" style="margin-top:1.2rem">Le simulateur chiffre chacun de ces postes.</p>' +
           '</div>' +
         '</div>' +
 
-        '<div style="margin-top:3.5rem;border-top:1px solid var(--hair);padding-top:2.2rem">' +
+        '<div class="card" style="margin-top:20px">' +
           '<p class="label label--accent" style="margin-bottom:.9rem">Échéancier</p>' +
           '<h3 style="max-width:20ch">Comment vous paierez</h3>' +
           '<p style="color:var(--ink-soft);font-size:.96rem;max-width:58ch">Calculé sur le milieu de la fourchette. Chaque tranche n\'est appelée qu\'après constat d\'avancement sur site.</p>' +
-          '<div style="margin-top:1.4rem;border-top:1px solid var(--hair)">' + echeancier + '</div>' +
+          '<div style="margin-top:1.2rem">' + echeancier + '</div>' +
         '</div>' +
       '</div>' +
     '</section>' +

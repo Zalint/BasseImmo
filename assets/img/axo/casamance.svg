@@ -1,27 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-label="Axonométrie du modèle Casamance">
-<defs><pattern id="sol" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v10" stroke="#A79C8D" stroke-width=".8" opacity=".5"/></pattern></defs>
-<rect width="900" height="700" fill="#FAF8F4"/>
-<path d="M408.46 239.64 L777.67 452.8 L491.54 618.0 L122.33 404.84 Z" fill="url(#sol)" stroke="#D8D0C4" stroke-width="1.3" stroke-linejoin="round"/>
-<path d="M233.09 404.84 L491.54 554.05 L491.54 487.97 L233.09 338.76 Z" fill="#E2D9CA" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M666.91 452.8 L491.54 554.05 L491.54 487.97 L666.91 386.72 Z" fill="#F0EAE0" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M408.46 237.51 L666.91 386.72 L491.54 487.97 L233.09 338.76 Z" fill="#FBF9F5" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/>
-<path d="M268.76 405.18 L300.81 423.69 L300.81 392.78 L268.76 374.28 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M320.45 435.03 L352.49 453.53 L352.49 422.62 L320.45 404.12 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M372.14 464.87 L404.18 483.37 L404.18 452.46 L372.14 433.96 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M423.82 494.71 L455.87 513.21 L455.87 482.3 L423.82 463.8 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M625.99 456.18 L590.91 476.43 L590.91 445.52 L625.99 425.27 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M567.53 489.93 L532.45 510.18 L532.45 479.27 L567.53 459.02 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M233.09 338.76 L491.54 487.97 L491.54 421.89 L233.09 272.68 Z" fill="#E2D9CA" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M666.91 386.72 L491.54 487.97 L491.54 421.89 L666.91 320.64 Z" fill="#F0EAE0" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M408.46 171.43 L666.91 320.64 L491.54 421.89 L233.09 272.68 Z" fill="#FBF9F5" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/>
-<path d="M268.76 339.1 L300.81 357.61 L300.81 326.7 L268.76 308.2 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M320.45 368.95 L352.49 387.45 L352.49 356.54 L320.45 338.04 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M372.14 398.79 L404.18 417.29 L404.18 386.38 L372.14 367.88 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M423.82 428.63 L455.87 447.13 L455.87 416.22 L423.82 397.72 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M625.99 390.1 L590.91 410.35 L590.91 379.44 L625.99 359.19 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M567.53 423.85 L532.45 444.1 L532.45 413.19 L567.53 392.94 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M222.02 272.68 L491.54 428.29 L491.54 418.7 L222.02 263.09 Z" fill="#DED4C3" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/><path d="M677.98 320.64 L491.54 428.29 L491.54 418.7 L677.98 311.05 Z" fill="#EBE4D8" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/><path d="M408.46 155.45 L677.98 311.05 L491.54 418.7 L222.02 263.09 Z" fill="#F7F3EC" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/>
-<path d="M408.46 181.03 L633.68 311.05 L491.54 393.12 L266.32 263.09 Z" fill="none" stroke="#6E6459" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M266.32 263.09L491.54 393.12" stroke="#A79C8D" stroke-width="1" opacity=".5" stroke-dasharray="4 4"/>
-<path d="M177.71 436.82L436.15 586.03" stroke="#6E6459" stroke-width="1"/>
-<text x="306.93" y="531.42" text-anchor="middle" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="12" fill="#6E6459">14.0 m</text>
-<text x="34" y="46" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="13" font-weight="600" fill="#1A1713" letter-spacing=".16em">CASAMANCE</text>
-<text x="34" y="66" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="11.5" fill="#6E6459" letter-spacing=".06em">AXONOMÉTRIE · BIOCLIMATIQUE R+1</text>
-<path d="M34 78h150" stroke="#D8D0C4" stroke-width="1"/>
+<defs><pattern id="sol" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v10" stroke="#9AA8C0" stroke-width=".8" opacity=".5"/></pattern></defs>
+<path d="M408.46 239.64 L777.67 452.8 L491.54 618.0 L122.33 404.84 Z" fill="url(#sol)" stroke="#D3DCEA" stroke-width="1.3" stroke-linejoin="round"/>
+<path d="M233.09 404.84 L491.54 554.05 L491.54 487.97 L233.09 338.76 Z" fill="#D8E2F3" stroke="#14213D" stroke-width="1.9" stroke-linejoin="round"/><path d="M666.91 452.8 L491.54 554.05 L491.54 487.97 L666.91 386.72 Z" fill="#EEF3FB" stroke="#14213D" stroke-width="1.9" stroke-linejoin="round"/><path d="M408.46 237.51 L666.91 386.72 L491.54 487.97 L233.09 338.76 Z" fill="#FFFFFF" stroke="#14213D" stroke-width="1.9" stroke-linejoin="round"/>
+<path d="M268.76 405.18 L300.81 423.69 L300.81 392.78 L268.76 374.28 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M320.45 435.03 L352.49 453.53 L352.49 422.62 L320.45 404.12 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M372.14 464.87 L404.18 483.37 L404.18 452.46 L372.14 433.96 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M423.82 494.71 L455.87 513.21 L455.87 482.3 L423.82 463.8 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M625.99 456.18 L590.91 476.43 L590.91 445.52 L625.99 425.27 Z" fill="#F5C46B" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M567.53 489.93 L532.45 510.18 L532.45 479.27 L567.53 459.02 Z" fill="#F5C46B" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M233.09 338.76 L491.54 487.97 L491.54 421.89 L233.09 272.68 Z" fill="#D8E2F3" stroke="#14213D" stroke-width="1.9" stroke-linejoin="round"/><path d="M666.91 386.72 L491.54 487.97 L491.54 421.89 L666.91 320.64 Z" fill="#EEF3FB" stroke="#14213D" stroke-width="1.9" stroke-linejoin="round"/><path d="M408.46 171.43 L666.91 320.64 L491.54 421.89 L233.09 272.68 Z" fill="#FFFFFF" stroke="#14213D" stroke-width="1.9" stroke-linejoin="round"/>
+<path d="M268.76 339.1 L300.81 357.61 L300.81 326.7 L268.76 308.2 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M320.45 368.95 L352.49 387.45 L352.49 356.54 L320.45 338.04 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M372.14 398.79 L404.18 417.29 L404.18 386.38 L372.14 367.88 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M423.82 428.63 L455.87 447.13 L455.87 416.22 L423.82 397.72 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M625.99 390.1 L590.91 410.35 L590.91 379.44 L625.99 359.19 Z" fill="#F5C46B" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M567.53 423.85 L532.45 444.1 L532.45 413.19 L567.53 392.94 Z" fill="#F5C46B" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M222.02 272.68 L491.54 428.29 L491.54 418.7 L222.02 263.09 Z" fill="#D0DBEE" stroke="#14213D" stroke-width="1.4" stroke-linejoin="round"/><path d="M677.98 320.64 L491.54 428.29 L491.54 418.7 L677.98 311.05 Z" fill="#E3EAF6" stroke="#14213D" stroke-width="1.4" stroke-linejoin="round"/><path d="M408.46 155.45 L677.98 311.05 L491.54 418.7 L222.02 263.09 Z" fill="#F4F7FC" stroke="#14213D" stroke-width="1.4" stroke-linejoin="round"/>
+<path d="M408.46 181.03 L633.68 311.05 L491.54 393.12 L266.32 263.09 Z" fill="none" stroke="#5E6B82" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M266.32 263.09L491.54 393.12" stroke="#9AA8C0" stroke-width="1" opacity=".5" stroke-dasharray="4 4"/>
+<path d="M177.71 436.82L436.15 586.03" stroke="#5E6B82" stroke-width="1"/>
+<text x="306.93" y="531.42" text-anchor="middle" font-family="Figtree,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#5E6B82">14.0 m</text>
+<text x="34" y="46" font-family="Figtree,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#14213D" letter-spacing=".16em">CASAMANCE</text>
+<text x="34" y="66" font-family="Figtree,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#5E6B82" letter-spacing=".06em">AXONOMÉTRIE · BIOCLIMATIQUE R+1</text>
+<path d="M34 78h150" stroke="#D3DCEA" stroke-width="1"/>
 </svg>

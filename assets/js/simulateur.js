@@ -166,24 +166,22 @@
     var blocTerrain = '';
     if (r.terrain) {
       blocTerrain =
-        '<div style="margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.16)">' +
-          '<p class="label" style="margin-bottom:.5rem">Terrain estimé en plus</p>' +
-          '<p style="font-size:1.6rem;font-weight:620;letter-spacing:-.04em;color:var(--on-umber);margin-bottom:.2rem">' +
-            BI.fourchette(r.terrain.min, r.terrain.max) + '</p>' +
-          '<p class="mono" style="font-size:.74rem;color:var(--on-umber-mute)">' + etat.parcelle + ' m² à ' +
+        '<div class="sim__extra">' +
+          '<p class="label">Terrain estimé en plus</p>' +
+          '<p class="sim__figure">' + BI.fourchette(r.terrain.min, r.terrain.max) + '</p>' +
+          '<p class="fine">' + etat.parcelle + ' m² à ' +
             BI.fmt(r.terrain.m2Min) + ' – ' + BI.fmt(r.terrain.m2Max) + ' FCFA/m² · hors frais de mutation</p>' +
-          '<p style="margin-top:.8rem;font-size:1.15rem;font-weight:600;letter-spacing:-.03em;color:var(--clay)">' +
-            'Tout compris : ' + BI.fourchette(r.min + r.terrain.min, r.max + r.terrain.max) + '</p>' +
+          '<p class="sim__sum">Tout compris : ' + BI.fourchette(r.min + r.terrain.min, r.max + r.terrain.max) + '</p>' +
         '</div>';
     }
 
     var blocCredit = '';
     if (mensualite) {
       blocCredit =
-        '<div style="margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.16)">' +
-          '<p class="label" style="margin-bottom:.5rem">Mensualité estimée</p>' +
-          '<p style="font-size:1.7rem;font-weight:620;letter-spacing:-.04em;color:var(--on-umber)">' + BI.fcfa(Math.round(mensualite)) + '<span style="font-size:.9rem;font-weight:400;color:var(--on-umber-mute)"> / mois</span></p>' +
-          '<p class="mono" style="font-size:.74rem;color:var(--on-umber-mute);margin-top:.4rem">Apport de ' + BI.fcfaCourt(r.moyen * etat.apport / 100) +
+        '<div class="sim__extra">' +
+          '<p class="label">Mensualité estimée</p>' +
+          '<p class="sim__figure">' + BI.fcfa(Math.round(mensualite)) + '<small> / mois</small></p>' +
+          '<p class="fine">Apport de ' + BI.fcfaCourt(r.moyen * etat.apport / 100) +
             ', emprunt de ' + BI.fcfaCourt(aFinancer) + ' sur ' + etat.annees + ' ans à ' + String(etat.taux).replace('.', ',') + ' %</p>' +
         '</div>';
     }
@@ -231,11 +229,11 @@
   }
 
   function echeancierHtml(r) {
-    return '<div style="margin-top:3.5rem;border-top:1px solid var(--hair);padding-top:2.2rem" data-reveal>' +
+    return '<div class="card" style="margin-top:20px">' +
       '<p class="label label--accent" style="margin-bottom:.9rem">Échéancier</p>' +
       '<h3 style="max-width:20ch">Comment vous paierez</h3>' +
       '<p style="color:var(--ink-soft);font-size:.96rem;max-width:58ch">Chaque tranche n\'est appelée qu\'après constat d\'avancement sur site. Aucun paiement à l\'avance, aucun paiement au calendrier seul.</p>' +
-      '<div style="margin-top:1.4rem;border-top:1px solid var(--hair)">' +
+      '<div style="margin-top:1.2rem">' +
         r.echeancier.map(function (e, i) {
           return '<div class="sched-row">' +
             '<span class="sched-row__dot">' + (i + 1) + '</span>' +

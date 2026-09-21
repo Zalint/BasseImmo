@@ -28,7 +28,7 @@
     if (!hote) return;
 
     hote.innerHTML =
-      '<div>' +
+      '<div class="sim__panel">' +
         '<div class="field">' +
           '<div class="range-head">' +
             '<label for="ms-surface">Surface habitable</label>' +
@@ -146,7 +146,7 @@
     if (!corps) return;
     corps.innerHTML = BI.zones.map(function (z) {
       return '<tr>' +
-        '<th scope="row" style="font-family:var(--sans);font-weight:550;font-size:.95rem;text-transform:none;letter-spacing:-.01em;color:var(--ink)">' + BI.escape(z.nom) + '</th>' +
+        '<th scope="row">' + BI.escape(z.nom) + '</th>' +
         '<td>' + BI.escape(z.region) + '</td>' +
         '<td class="num">' + BI.fmt(z.terrainMin) + ' – ' + BI.fmt(z.terrainMax) + '</td>' +
         '<td class="num">' + BI.fourchette(z.terrainMin * 200, z.terrainMax * 200) + '</td>' +
@@ -163,9 +163,10 @@
     var c = BI.chantiers['BI-2026-014'];
 
     hote.innerHTML =
-      '<div class="row row--between" style="align-items:baseline;margin-bottom:.8rem">' +
-        '<span class="label">Chantier ' + BI.escape(c.code) + ' \u00b7 ' + BI.escape(c.lieu) + '</span>' +
-        '<span class="mono" style="font-size:2rem;font-weight:500;letter-spacing:-.04em">' + c.avancement + '&nbsp;%</span>' +
+      '<div class="widget__head">' +
+        '<span><span class="label">Chantier ' + BI.escape(c.code) + '</span>' +
+        '<b class="widget__title">' + BI.escape(c.modele) + ' \u00b7 ' + BI.escape(c.lieu) + '</b></span>' +
+        '<span class="widget__pct">' + c.avancement + '&nbsp;%</span>' +
       '</div>' +
       '<div class="progress" role="img" aria-label="Avancement : ' + c.avancement + ' pour cent">' +
         '<i style="width:' + c.avancement + '%"></i></div>' +
@@ -180,7 +181,33 @@
       '</div>';
   }
 
+  /* ---------------------------------------------------------
+     5. Cartes flottantes du héros
+     Les montants viennent du moteur et des données, jamais écrits en dur.
+     --------------------------------------------------------- */
+  function heroApercu() {
+    var hote = $('#hero-visuel');
+    if (!hote) return;
+    var m = BI.modeles.filter(function (x) { return x.id === 'teranga'; })[0];
+    var c = BI.chantiers['BI-2026-014'];
+    var html = '';
+    if (m) {
+      var b = BI.budgetModele(m);
+      html += '<a class="float float--budget" href="modele.html?id=' + m.id + '">' +
+        '<span>Villa ' + BI.escape(m.nom) + ' · budget estimé</span>' +
+        '<b>' + BI.fourchette(b.min, b.max) + '</b></a>';
+    }
+    if (c) {
+      html += '<a class="float float--suivi" href="suivi.html?code=' + encodeURIComponent(c.code) + '">' +
+        '<span>Chantier ' + BI.escape(c.code) + ' · ' + BI.escape(c.lieu) + '</span>' +
+        '<b>' + c.avancement + '&nbsp;% réalisés</b>' +
+        '<span class="progress" aria-hidden="true"><i style="width:' + c.avancement + '%"></i></span></a>';
+    }
+    hote.insertAdjacentHTML('beforeend', html);
+  }
+
   document.addEventListener('bi:ready', function () {
+    heroApercu();
     miniSim();
     modelesAccueil();
     tableauZones();

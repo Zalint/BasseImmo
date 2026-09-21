@@ -1,20 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-label="Axonométrie du modèle Lac Rose">
-<defs><pattern id="sol" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v10" stroke="#A79C8D" stroke-width=".8" opacity=".5"/></pattern></defs>
-<rect width="900" height="700" fill="#FAF8F4"/>
-<path d="M407.81 179.5 L829.75 423.11 L492.19 618.0 L70.25 374.39 Z" fill="url(#sol)" stroke="#D8D0C4" stroke-width="1.3" stroke-linejoin="round"/>
-<path d="M196.83 374.39 L492.19 544.92 L492.19 469.4 L196.83 298.87 Z" fill="#E2D9CA" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M703.17 423.11 L492.19 544.92 L492.19 469.4 L703.17 347.59 Z" fill="#F0EAE0" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M407.81 177.07 L703.17 347.59 L492.19 469.4 L196.83 298.87 Z" fill="#FBF9F5" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/>
-<path d="M237.59 374.78 L274.22 395.93 L274.22 360.6 L237.59 339.46 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M296.67 408.89 L333.29 430.03 L333.29 394.71 L296.67 373.56 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M355.74 442.99 L392.36 464.14 L392.36 428.81 L355.74 407.67 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M414.81 477.1 L451.43 498.24 L451.43 462.92 L414.81 441.77 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M653.94 428.39 L611.74 452.75 L611.74 417.43 L653.94 393.07 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M583.62 468.99 L541.42 493.35 L541.42 458.03 L583.62 433.67 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M184.18 298.87 L492.19 476.71 L492.19 465.74 L184.18 287.91 Z" fill="#DED4C3" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/><path d="M715.82 347.59 L492.19 476.71 L492.19 465.74 L715.82 336.63 Z" fill="#EBE4D8" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/><path d="M407.81 158.8 L715.82 336.63 L492.19 465.74 L184.18 287.91 Z" fill="#F7F3EC" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/>
-<path d="M407.81 188.03 L665.19 336.63 L492.19 436.51 L234.81 287.91 Z" fill="none" stroke="#6E6459" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M234.81 287.91L492.19 436.51" stroke="#A79C8D" stroke-width="1" opacity=".5" stroke-dasharray="4 4"/>
-<path d="M133.54 410.93L428.9 581.46" stroke="#6E6459" stroke-width="1"/>
-<text x="281.22" y="516.2" text-anchor="middle" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="12" fill="#6E6459">14.0 m</text>
-<text x="34" y="46" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="13" font-weight="600" fill="#1A1713" letter-spacing=".16em">LAC ROSE</text>
-<text x="34" y="66" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="11.5" fill="#6E6459" letter-spacing=".06em">AXONOMÉTRIE · PLAIN-PIED + STUDIO</text>
-<path d="M34 78h150" stroke="#D8D0C4" stroke-width="1"/>
+<defs><pattern id="sol" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v10" stroke="#9AA8C0" stroke-width=".8" opacity=".5"/></pattern></defs>
+<path d="M407.81 179.5 L829.75 423.11 L492.19 618.0 L70.25 374.39 Z" fill="url(#sol)" stroke="#D3DCEA" stroke-width="1.3" stroke-linejoin="round"/>
+<path d="M196.83 374.39 L492.19 544.92 L492.19 469.4 L196.83 298.87 Z" fill="#D8E2F3" stroke="#14213D" stroke-width="1.9" stroke-linejoin="round"/><path d="M703.17 423.11 L492.19 544.92 L492.19 469.4 L703.17 347.59 Z" fill="#EEF3FB" stroke="#14213D" stroke-width="1.9" stroke-linejoin="round"/><path d="M407.81 177.07 L703.17 347.59 L492.19 469.4 L196.83 298.87 Z" fill="#FFFFFF" stroke="#14213D" stroke-width="1.9" stroke-linejoin="round"/>
+<path d="M237.59 374.78 L274.22 395.93 L274.22 360.6 L237.59 339.46 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M296.67 408.89 L333.29 430.03 L333.29 394.71 L296.67 373.56 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M355.74 442.99 L392.36 464.14 L392.36 428.81 L355.74 407.67 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M414.81 477.1 L451.43 498.24 L451.43 462.92 L414.81 441.77 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M653.94 428.39 L611.74 452.75 L611.74 417.43 L653.94 393.07 Z" fill="#F5C46B" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M583.62 468.99 L541.42 493.35 L541.42 458.03 L583.62 433.67 Z" fill="#F5C46B" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M184.18 298.87 L492.19 476.71 L492.19 465.74 L184.18 287.91 Z" fill="#D0DBEE" stroke="#14213D" stroke-width="1.4" stroke-linejoin="round"/><path d="M715.82 347.59 L492.19 476.71 L492.19 465.74 L715.82 336.63 Z" fill="#E3EAF6" stroke="#14213D" stroke-width="1.4" stroke-linejoin="round"/><path d="M407.81 158.8 L715.82 336.63 L492.19 465.74 L184.18 287.91 Z" fill="#F4F7FC" stroke="#14213D" stroke-width="1.4" stroke-linejoin="round"/>
+<path d="M407.81 188.03 L665.19 336.63 L492.19 436.51 L234.81 287.91 Z" fill="none" stroke="#5E6B82" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M234.81 287.91L492.19 436.51" stroke="#9AA8C0" stroke-width="1" opacity=".5" stroke-dasharray="4 4"/>
+<path d="M133.54 410.93L428.9 581.46" stroke="#5E6B82" stroke-width="1"/>
+<text x="281.22" y="516.2" text-anchor="middle" font-family="Figtree,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#5E6B82">14.0 m</text>
+<text x="34" y="46" font-family="Figtree,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#14213D" letter-spacing=".16em">LAC ROSE</text>
+<text x="34" y="66" font-family="Figtree,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#5E6B82" letter-spacing=".06em">AXONOMÉTRIE · PLAIN-PIED + STUDIO</text>
+<path d="M34 78h150" stroke="#D3DCEA" stroke-width="1"/>
 </svg>

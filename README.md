@@ -4,8 +4,8 @@ Site vitrine statique pour un atelier de conception et de construction de
 maisons au Sénégal : catalogue de plans chiffrés, simulateur de budget en francs
 CFA, guide pratique et espace de suivi de chantier destiné à la diaspora.
 
-La direction artistique est celle d'un studio d'architecture : dessin technique
-au trait, typographie large, aucune photographie.
+La direction artistique est celle d'une interface claire et moderne : cartes
+arrondies, bleu océan pour l'action, dessins au trait, aucune photographie.
 
 Aucune dépendance, aucune étape de compilation, aucun serveur applicatif :
 ce sont des fichiers HTML, CSS et JavaScript que l'on peut héberger tels quels.
@@ -185,39 +185,55 @@ pour que le site reste lisible sans JavaScript et correctement indexé.
 
 ## Direction artistique
 
-Le parti pris est celui d'un atelier d'architecture : papier blanc cassé,
-typographie large, dessin technique plutôt que photographie, filets d'un pixel
-plutôt qu'ombres portées.
+Une interface claire et moderne, pensée pour inspirer confiance à une famille de
+Dakar comme à un client de la diaspora qui découvre le site sur son téléphone :
+grille de cartes de tailles variées, coins arrondis, ombres douces, beaucoup
+d'air.
 
-**Couleurs** — un papier blanc cassé en base, une encre presque noire, une
-terre cuite en accent, et deux matières utilisées en bandeaux pleine largeur :
-le sable et le brun profond. Chaque bandeau redéfinit localement ses rôles de
-texte (`--ink-soft`, `--ink-mute`, `--hair`, `--accent`), si bien qu'un
-composant posé dessus reste lisible sans règle dédiée.
+**Thème** : clair par défaut. Le thème sombre s'active seulement si le visiteur
+le choisit avec le bouton de l'en-tête, et ce choix est mémorisé dans le
+navigateur. Les réglages du système sont ignorés.
 
-**Thème sombre** — suit les réglages du système, avec un bouton de bascule
-mémorisé dans le navigateur.
+**Couleurs** : un bleu océan (`#2450E0`) pour les actions et les liens, un jaune
+soleil (`#FFB938`) pour les repères (fanions, étape en cours), des neutres
+gris-bleu, et le vert WhatsApp réservé aux boutons de contact. Les bandeaux
+sombres (méthode, résultat du simulateur, pied de page) sont bleu nuit. Toutes
+les couleurs sont des jetons définis en tête de `style.css`. Chaque bandeau
+redéfinit localement ses rôles de texte (`--ink`, `--ink-soft`, `--line`,
+`--brand-text`), si bien qu'un composant posé dessus reste lisible sans règle
+dédiée.
 
-**Typographie** — Inter Tight pour les titres et le texte, IBM Plex Mono pour
-les libellés, les cotes, les chiffres et les index de section. Ce couple
-grotesque plus monospace est la langue des agences d'architecture, et il donne
-au site sa lecture technique.
+**Typographie** : Figtree, une seule famille, de la graisse 400 à 800. Elle a
+été retenue face à Plus Jakarta Sans parce que ses virgules et ses points
+restent collés aux mots dans les grands titres. Les montants utilisent des
+chiffres tabulaires.
 
-**Dessins** — pas de photographie. Chaque modèle est représenté par un plan du
-rez-de-chaussée coté (murs, portes avec leur débattement, fenêtres, surfaces,
-cotes, orientation) et par une axonométrie au trait. Les deux séries sont
-générées et restent modifiables dans `assets/img/plans/` et `assets/img/axo/`.
-Les emplacements sont prêts à recevoir de vraies photos le jour où vous en
-aurez.
+**Formes** : cartes arrondies à 24 px, boutons en pilule, en-tête vitré qui
+reste net au défilement, bandeaux sombres posés comme des cartes.
 
-**Icônes** — 103 icônes SVG au trait, injectées en une fois par `icons.js`,
-utilisées avec parcimonie. Aucune requête réseau, aucune bibliothèque externe.
+**Dessins** : pas de photographie. Chaque modèle a un plan du rez-de-chaussée
+coté et une axonométrie au trait, recolorés dans la palette du site (traits bleu
+nuit, vitrages bleus, portes jaune soleil). En thème sombre, ils sont inversés
+pour garder un trait clair sur fond nuit. Les deux séries restent modifiables
+dans `assets/img/plans/` et `assets/img/axo/`, et les emplacements sont prêts à
+recevoir de vraies photos le jour où vous en aurez.
 
-**Accessibilité** — contrastes vérifiés au niveau AA sur toutes les pages et
-dans les deux thèmes, hiérarchie de titres continue, champs de formulaire tous
-étiquetés, navigation au clavier, lien d'évitement, et respect de
-`prefers-reduced-motion`.
+**Icônes** : 103 icônes SVG au trait, injectées en une fois par `icons.js`.
+Aucune requête réseau, aucune bibliothèque externe.
 
-**Performance** — pas de framework, pas de bibliothèque, images en SVG
+**Accessibilité** : contrastes vérifiés au niveau AA sur toutes les pages et
+dans les deux thèmes, zones de clic d'au moins 44 px, aucun texte sous 12 px,
+hiérarchie de titres continue, champs de formulaire tous étiquetés, navigation
+au clavier, lien d'évitement et respect de `prefers-reduced-motion`. Les espaces
+placées avant « : ; ? ! % » deviennent insécables, ce qui évite les retours à la
+ligne fautifs.
+
+**Mouvement** : les blocs apparaissent en cascade au défilement, les survols
+durent de 150 à 220 ms. Sans JavaScript, tout le contenu reste visible.
+
+**Performance** : pas de framework, pas de bibliothèque, images en SVG
 (quelques kilo-octets chacune), chargement différé des dessins. Pensé pour
 tenir sur une connexion mobile moyenne.
+
+**Image de partage** : `assets/img/og.png` (1200 × 630) reprend le héros de
+l'accueil. C'est elle qui s'affiche dans l'aperçu d'un lien envoyé sur WhatsApp.

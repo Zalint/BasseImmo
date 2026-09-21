@@ -6,8 +6,7 @@
 <title>Contact et demande de devis | Basse Immo</title>
 <meta name="description" content="Demandez un devis de construction au Sénégal. Réponse sous dix jours ouvrés, ou immédiatement sur WhatsApp. Bureau à Dakar, intervention dans tout le pays.">
 <link rel="canonical" href="https://basseimmo.sn/contact.html">
-<meta name="theme-color" content="#FAF8F4" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#141210" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Basse Immo">
 <meta property="og:locale" content="fr_SN">
@@ -19,7 +18,7 @@
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400..800&display=swap">
 <link rel="stylesheet" href="assets/css/style.css">
 <script>
 /* Applique le thème enregistré avant le premier rendu, pour éviter un flash clair. */
@@ -137,12 +136,12 @@
             <label for="f-message">Dites-nous en plus</label>
             <textarea class="textarea" id="f-message" name="message" placeholder="Nombre de chambres, contraintes de la parcelle, échéance souhaitée, questions…"></textarea>
           </div>
-          <p id="form-erreur" role="alert" style="display:none;color:var(--clay);font-size:.9rem;font-weight:550;margin-bottom:.9rem"></p>
+          <p id="form-erreur" role="alert" style="display:none;color:var(--danger);font-size:.9rem;font-weight:550;margin-bottom:.9rem"></p>
           <div class="stack">
             <button class="btn btn--wa btn--block btn--lg" type="submit" id="envoi-wa"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"></use></svg> Envoyer sur WhatsApp</button>
             <button class="btn btn--line btn--block" type="button" id="envoi-mail"><svg class="ico" aria-hidden="true"><use href="#i-mail"></use></svg> Envoyer par e-mail</button>
           </div>
-          <p class="mono" style="font-size:.72rem;color:var(--ink-mute);margin-top:1.2rem;line-height:1.7">Ce site n'a pas de base de données : votre message part directement dans votre application WhatsApp ou votre messagerie. Rien n'est stocké ici.</p>
+          <p class="fine" style="margin-top:1.2rem">Ce site n'a pas de base de données : votre message part directement dans votre application WhatsApp ou votre messagerie. Rien n'est stocké ici.</p>
         </form>
       </div>
 
@@ -156,7 +155,7 @@
         <p style="margin-top:1.2rem;font-size:.93rem;color:var(--ink-soft)"><span data-bi="adresse"></span><br><span data-bi="horaires"></span></p>
 
         <p class="label label--accent" style="margin:2.4rem 0 1rem">Ce qui se passe ensuite</p>
-        <div style="border-top:1px solid var(--hair)">
+        <div class="card" style="padding-block:.4rem">
           <div class="sched-row"><span class="sched-row__dot">01</span><span>Nous vous rappelons<small>Sous 24 h ouvrées</small></span><strong></strong></div>
           <div class="sched-row"><span class="sched-row__dot">02</span><span>Échange de 30 minutes<small>Besoin, budget, terrain</small></span><strong>Gratuit</strong></div>
           <div class="sched-row"><span class="sched-row__dot">03</span><span>Visite du terrain<small>Ou analyse à distance</small></span><strong></strong></div>

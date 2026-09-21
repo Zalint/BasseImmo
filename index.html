@@ -6,8 +6,7 @@
 <title>Basse Immo — Construire votre maison au Sénégal, du terrain aux clés</title>
 <meta name="description" content="Atelier de construction à Dakar. Plans chiffrés, estimation de budget en FCFA, vérification du terrain et suivi de chantier en ligne. Partout au Sénégal, pour les familles sur place comme pour la diaspora.">
 <link rel="canonical" href="https://basseimmo.sn/">
-<meta name="theme-color" content="#FAF8F4" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#141210" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Basse Immo">
 <meta property="og:locale" content="fr_SN">
@@ -19,7 +18,7 @@
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400..800&display=swap">
 <link rel="stylesheet" href="assets/css/style.css">
 <script>
 /* Applique le thème enregistré avant le premier rendu, pour éviter un flash clair. */
@@ -81,23 +80,30 @@
 <!-- ====================== HÉROS ====================== -->
 <section class="hero">
   <div class="container">
-    <p class="label label--accent" style="margin-bottom:1.6rem">Atelier de construction · Sénégal</p>
-    <h1>Votre maison au Sénégal,<br><em>du terrain aux clés.</em></h1>
-
-    <div class="hero__body">
+    <div class="hero__grid">
       <div>
+        <p class="pill"><span class="pill__dot" aria-hidden="true"></span> Atelier de construction · Sénégal</p>
+        <h1>Votre maison au Sénégal, <span class="hl">du terrain aux clés.</span></h1>
         <p class="hero__lead">Nous concevons, chiffrons et construisons. Vous choisissez un plan, vous connaissez votre budget en deux minutes, vous suivez le chantier depuis votre téléphone. Que vous soyez à Dakar, à Thiès ou à dix mille kilomètres d'ici.</p>
-        <div class="row" style="margin-top:2rem">
+        <div class="row hero__ctas">
           <a class="btn btn--lg" href="simulateur.html">Estimer mon budget <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
           <a class="btn btn--line btn--lg" href="modeles.html">Voir les 12 modèles</a>
         </div>
+        <ul class="hero__proof">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-shield-check"></use></svg> Prix ferme au contrat</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-camera"></use></svg> Photos chaque vendredi</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-wallet"></use></svg> Paiement par phase validée</li>
+        </ul>
       </div>
-      <figure class="hero__art" style="margin:0" data-reveal>
-        <img src="assets/img/axo/teranga.svg" width="900" height="700" alt="Axonométrie de la villa Teranga, maison familiale R+1 avec toit-terrasse">
-      </figure>
+
+      <div class="hero__visual" id="hero-visuel">
+        <figure class="hero__art">
+          <img src="assets/img/axo/teranga.svg" width="900" height="700" fetchpriority="high" alt="Axonométrie de la villa Teranga, maison familiale R+1 avec toit-terrasse">
+        </figure>
+      </div>
     </div>
 
-    <div class="stats" style="margin-top:clamp(3rem,6vw,5rem)">
+    <div class="stats">
       <div class="stat"><b>180+</b><span>maisons livrées</span></div>
       <div class="stat"><b>14</b><span>régions couvertes</span></div>
       <div class="stat"><b>62 %</b><span>de clients à l'étranger</span></div>
@@ -106,179 +112,167 @@
   </div>
 </section>
 
-<!-- ====================== 01 · MÉTIERS ====================== -->
-<section class="section">
+<!-- ====================== MÉTIERS ====================== -->
+<section class="section" id="metiers">
   <div class="container">
-  <div class="shead shead--split">
-    <div class="shead__top">
-      <span class="idx">01</span>
-      <span class="label">Ce que nous faisons</span>
+    <div class="shead shead--split">
+      <div class="shead__top"><span class="label">Ce que nous faisons</span></div>
+      <div><h2>Six métiers, un seul interlocuteur</h2></div>
+      <div>
+        <p class="shead__lead">Construire au Sénégal demande un architecte, un ingénieur, un géomètre, des entreprises et souvent une banque. Nous réunissons tout cela sous un seul contrat.</p>
+        <a class="alink" href="services.html" style="margin-top:.6rem">Toutes les prestations <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+      </div>
     </div>
-    <div><h2>Six métiers, un seul interlocuteur</h2></div>
-    <div>
-      <p class="shead__lead">Construire au Sénégal demande un architecte, un ingénieur, un géomètre, des entreprises et souvent une banque. Nous réunissons tout cela sous un seul contrat.</p>
-      <div class="row" style="margin-top:1.6rem"><a class="alink" href="services.html">Toutes les prestations <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a></div>
-    </div>
-  </div>
-    <div class="entries">
-      <a class="entry" href="services.html#cle-en-main" data-reveal>
-        <span class="entry__idx">01</span>
-        <h3 class="entry__title">Construction clé en main</h3>
-        <p class="entry__desc">Un contrat à prix ferme, un calendrier avec pénalités de retard, une seule signature et un seul responsable.</p>
-        <span class="entry__go"><svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+
+    <div class="bento">
+      <a class="bento__card bento__card--wide bento__card--feature" href="services.html#cle-en-main" data-reveal>
+        <span class="bento__icon"><svg class="ico" aria-hidden="true"><use href="#i-key"></use></svg></span>
+        <h3>Construction clé en main</h3>
+        <p>Un contrat à prix ferme, un calendrier avec pénalités de retard, une seule signature et un seul responsable.</p>
+        <ul class="bento__tags"><li>Prix ferme</li><li>Pénalités de retard</li><li>Un seul responsable</li></ul>
       </a>
-      <a class="entry" href="services.html#foncier" data-reveal>
-        <span class="entry__idx">02</span>
-        <h3 class="entry__title">Vérification du terrain</h3>
-        <p class="entry__desc">Recherche au Livre foncier, contrôle du vendeur et bornage par un géomètre agréé, avant tout versement.</p>
-        <span class="entry__go"><svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+      <a class="bento__card" href="services.html#foncier" data-reveal>
+        <span class="bento__icon"><svg class="ico" aria-hidden="true"><use href="#i-shield-check"></use></svg></span>
+        <h3>Vérification du terrain</h3>
+        <p>Recherche au Livre foncier, contrôle du vendeur et bornage par un géomètre agréé, avant tout versement.</p>
+        <span class="bento__more">Découvrir <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
       </a>
-      <a class="entry" href="services.html#plans" data-reveal>
-        <span class="entry__idx">03</span>
-        <h3 class="entry__title">Architecture et plans</h3>
-        <p class="entry__desc">Plans cotés, façades, coupes, axonométrie et dossier de permis de construire déposé par nos soins.</p>
-        <span class="entry__go"><svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+      <a class="bento__card" href="services.html#plans" data-reveal>
+        <span class="bento__icon"><svg class="ico" aria-hidden="true"><use href="#i-compass"></use></svg></span>
+        <h3>Architecture et plans</h3>
+        <p>Plans cotés, façades, coupes, axonométrie et dossier de permis de construire déposé par nos soins.</p>
+        <span class="bento__more">Découvrir <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
       </a>
-      <a class="entry" href="services.html#suivi" data-reveal>
-        <span class="entry__idx">04</span>
-        <h3 class="entry__title">Suivi de chantier en ligne</h3>
-        <p class="entry__desc">Photos horodatées chaque vendredi, avancement par phase et visite du chantier en visioconférence.</p>
-        <span class="entry__go"><svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+      <a class="bento__card bento__card--wide bento__card--media" href="services.html#suivi" data-reveal>
+        <div>
+          <span class="bento__icon"><svg class="ico" aria-hidden="true"><use href="#i-camera"></use></svg></span>
+          <h3>Suivi de chantier en ligne</h3>
+          <p>Photos horodatées chaque vendredi, avancement par phase et visite du chantier en visioconférence.</p>
+          <span class="bento__more">Découvrir <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+        </div>
+        <div class="bento__shots" aria-hidden="true">
+          <img src="assets/img/chantier/chantier-3.svg" width="600" height="450" loading="lazy" alt="">
+          <img src="assets/img/chantier/chantier-2.svg" width="600" height="450" loading="lazy" alt="">
+          <img src="assets/img/chantier/chantier-5.svg" width="600" height="450" loading="lazy" alt="">
+        </div>
       </a>
-      <a class="entry" href="services.html#financement" data-reveal>
-        <span class="entry__idx">05</span>
-        <h3 class="entry__title">Montage du financement</h3>
-        <p class="entry__desc">Dossier bancaire, crédit pour non-résidents et appels de fonds calés sur votre capacité d'épargne.</p>
-        <span class="entry__go"><svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+      <a class="bento__card" href="services.html#financement" data-reveal>
+        <span class="bento__icon"><svg class="ico" aria-hidden="true"><use href="#i-bank"></use></svg></span>
+        <h3>Montage du financement</h3>
+        <p>Dossier bancaire, crédit pour non-résidents et appels de fonds calés sur votre capacité d'épargne.</p>
+        <span class="bento__more">Découvrir <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
       </a>
-      <a class="entry" href="services.html#renovation" data-reveal>
-        <span class="entry__idx">06</span>
-        <h3 class="entry__title">Rénovation et surélévation</h3>
-        <p class="entry__desc">Diagnostic de structure, reprise d'étanchéité de toiture-terrasse et ajout d'un ou deux niveaux.</p>
-        <span class="entry__go"><svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+      <a class="bento__card" href="services.html#renovation" data-reveal>
+        <span class="bento__icon"><svg class="ico" aria-hidden="true"><use href="#i-layers"></use></svg></span>
+        <h3>Rénovation et surélévation</h3>
+        <p>Diagnostic de structure, reprise d'étanchéité de toiture-terrasse et ajout d'un ou deux niveaux.</p>
+        <span class="bento__more">Découvrir <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ====================== 02 · MODÈLES ====================== -->
-<section class="section section--paper2">
+<!-- ====================== CATALOGUE ====================== -->
+<section class="section section--paper2" id="catalogue">
   <div class="container">
-  <div class="shead shead--split">
-    <div class="shead__top">
-      <span class="idx">02</span>
-      <span class="label">Le catalogue</span>
+    <div class="shead shead--split">
+      <div class="shead__top"><span class="label">Le catalogue</span></div>
+      <div><h2>Des plans déjà chiffrés</h2></div>
+      <div>
+        <p class="shead__lead">Chaque modèle est un point de départ que nos architectes adaptent à la forme réelle de votre parcelle. Les budgets sont donnés hors terrain.</p>
+      </div>
     </div>
-    <div><h2>Des plans déjà chiffrés</h2></div>
-    <div>
-      <p class="shead__lead">Chaque modèle est un point de départ que nos architectes adaptent à la forme réelle de votre parcelle. Les budgets sont donnés hors terrain.</p>
-    </div>
-  </div>
     <div class="chips" id="home-filtres" style="margin-bottom:1.6rem" role="group" aria-label="Filtrer par budget"></div>
     <div class="plans" id="home-modeles"></div>
 
-    <div class="row" style="margin-top:2.4rem">
+    <div class="row" style="margin-top:2.4rem;justify-content:center">
       <a class="btn btn--line" href="modeles.html">Voir les 12 modèles <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
     </div>
   </div>
 </section>
 
-<!-- ====================== 03 · ESTIMATION ====================== -->
-<section class="section plate plate--sand" id="estimation">
+<!-- ====================== ESTIMATION ====================== -->
+<section class="section" id="estimation">
   <div class="container">
-  <div class="shead shead--split">
-    <div class="shead__top">
-      <span class="idx">03</span>
-      <span class="label">Estimation express</span>
+    <div class="shead shead--split">
+      <div class="shead__top"><span class="label">Estimation express</span></div>
+      <div><h2>Combien va coûter votre maison&nbsp;?</h2></div>
+      <div>
+        <p class="shead__lead">Trois réglages suffisent pour un ordre de grandeur fiable. Le simulateur complet ajoute les options, les honoraires et l'échéancier.</p>
+      </div>
     </div>
-    <div><h2>Combien va coûter votre maison ?</h2></div>
-    <div>
-      <p class="shead__lead">Trois réglages suffisent pour un ordre de grandeur fiable. Le simulateur complet ajoute les options, les honoraires et l'échéancier.</p>
-    </div>
-  </div>
-    <div id="mini-sim" class="sim" style="border:0;background:transparent;gap:clamp(1.5rem,3vw,3rem)">
+    <div id="mini-sim" class="sim">
       <noscript><p>Le simulateur nécessite JavaScript. Écrivez-nous sur WhatsApp pour une estimation.</p></noscript>
     </div>
   </div>
 </section>
 
-<!-- ====================== 04 · MÉTHODE ====================== -->
-<section class="section plate">
+<!-- ====================== MÉTHODE ====================== -->
+<section class="section plate" id="methode">
   <div class="container">
-  <div class="shead shead--split">
-    <div class="shead__top">
-      <span class="idx">04</span>
-      <span class="label">La méthode</span>
-    </div>
-    <div><h2>Cinq étapes, aucune zone d'ombre</h2></div>
-    <div>
-      <p class="shead__lead">Vous savez à chaque instant où en est le projet, ce qui a été payé et ce qui reste à faire.</p>
-    </div>
-  </div>
-    <div class="entries">
-      <div class="entry" data-reveal>
-        <span class="entry__idx">01</span>
-        <h3 class="entry__title">Premier échange</h3>
-        <p class="entry__desc">Un appel ou un message WhatsApp de trente minutes pour cerner le besoin, le budget et le terrain. Gratuit et sans engagement.</p>
-        <span></span>
-      </div>
-      <div class="entry" data-reveal>
-        <span class="entry__idx">02</span>
-        <h3 class="entry__title">Faisabilité et devis</h3>
-        <p class="entry__desc">Nous vérifions le terrain, dessinons une esquisse et remettons un devis détaillé poste par poste sous dix jours ouvrés.</p>
-        <span></span>
-      </div>
-      <div class="entry" data-reveal>
-        <span class="entry__idx">03</span>
-        <h3 class="entry__title">Plans et permis</h3>
-        <p class="entry__desc">Plans définitifs, étude de structure et dépôt du dossier de permis de construire auprès de la commune.</p>
-        <span></span>
-      </div>
-      <div class="entry" data-reveal>
-        <span class="entry__idx">04</span>
-        <h3 class="entry__title">Chantier suivi</h3>
-        <p class="entry__desc">Ouverture du chantier et de votre espace en ligne. Photos et rapport chaque semaine, paiement par phase validée.</p>
-        <span></span>
-      </div>
-      <div class="entry" data-reveal>
-        <span class="entry__idx">05</span>
-        <h3 class="entry__title">Remise des clés</h3>
-        <p class="entry__desc">Réception contradictoire, levée des réserves, dossier des ouvrages exécutés et garanties remis en main propre.</p>
-        <span></span>
+    <div class="shead shead--split">
+      <div class="shead__top"><span class="label">La méthode</span></div>
+      <div><h2>Cinq étapes, aucune zone d'ombre</h2></div>
+      <div>
+        <p class="shead__lead">Vous savez à chaque instant où en est le projet, ce qui a été payé et ce qui reste à faire.</p>
       </div>
     </div>
 
-    <div class="grid12" style="margin-top:clamp(3rem,5vw,4.5rem)">
-      <div class="c5">
-        <p class="label" style="margin-bottom:1.2rem">Pour la diaspora</p>
-        <blockquote style="margin:0;font-size:clamp(1.15rem,2vw,1.5rem);line-height:1.35;letter-spacing:-.025em;font-weight:500;color:var(--on-umber)">
-          « Je vis à Milan depuis onze ans. Recevoir les photos tous les vendredis et voir la dalle monter semaine après semaine, ça n'a pas de prix. »
-        </blockquote>
-        <p class="label" style="margin-top:1.4rem">Mamadou Bâ · Villa Saloum, Keur Massar</p>
-        <div class="row" style="margin-top:2rem">
-          <a class="btn btn--line" href="suivi.html">Essayer la démonstration <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
-        </div>
-      </div>
-      <div class="c6 start7">
+    <ol class="steps">
+      <li class="step" data-reveal>
+        <span class="step__num" aria-hidden="true">1</span>
+        <h3>Premier échange</h3>
+        <p>Un appel ou un message WhatsApp de trente minutes pour cerner le besoin, le budget et le terrain. Gratuit et sans engagement.</p>
+      </li>
+      <li class="step" data-reveal>
+        <span class="step__num" aria-hidden="true">2</span>
+        <h3>Faisabilité et devis</h3>
+        <p>Nous vérifions le terrain, dessinons une esquisse et remettons un devis détaillé poste par poste sous dix jours ouvrés.</p>
+      </li>
+      <li class="step" data-reveal>
+        <span class="step__num" aria-hidden="true">3</span>
+        <h3>Plans et permis</h3>
+        <p>Plans définitifs, étude de structure et dépôt du dossier de permis de construire auprès de la commune.</p>
+      </li>
+      <li class="step" data-reveal>
+        <span class="step__num" aria-hidden="true">4</span>
+        <h3>Chantier suivi</h3>
+        <p>Ouverture du chantier et de votre espace en ligne. Photos et rapport chaque semaine, paiement par phase validée.</p>
+      </li>
+      <li class="step" data-reveal>
+        <span class="step__num" aria-hidden="true">5</span>
+        <h3>Remise des clés</h3>
+        <p>Réception contradictoire, levée des réserves, dossier des ouvrages exécutés et garanties remis en main propre.</p>
+      </li>
+    </ol>
+
+    <div class="duo">
+      <figure class="testimonial" data-reveal>
+        <svg class="ico ico--quote" aria-hidden="true"><use href="#i-quote"></use></svg>
+        <blockquote><p>« Je vis à Milan depuis onze ans. Recevoir les photos tous les vendredis et voir la dalle monter semaine après semaine, ça n'a pas de prix. »</p></blockquote>
+        <figcaption class="testimonial__who">
+          <span class="avatar" aria-hidden="true">MB</span>
+          <span><b>Mamadou Bâ</b><span>Pour la diaspora · Villa Saloum, Keur Massar</span></span>
+        </figcaption>
+      </figure>
+      <div class="widget" data-reveal>
         <div id="apercu-suivi"></div>
+        <a class="btn btn--line" href="suivi.html" style="margin-top:auto;align-self:flex-start">Essayer la démonstration <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ====================== 05 · TERRAIN ====================== -->
-<section class="section">
+<!-- ====================== TERRAIN ====================== -->
+<section class="section" id="terrain">
   <div class="container">
-  <div class="shead shead--split">
-    <div class="shead__top">
-      <span class="idx">05</span>
-      <span class="label">Où nous construisons</span>
+    <div class="shead shead--split">
+      <div class="shead__top"><span class="label">Où nous construisons</span></div>
+      <div><h2>Le prix du terrain, région par région</h2></div>
+      <div>
+        <p class="shead__lead">Des ordres de grandeur observés sur le marché, utiles pour cadrer un budget avant même de visiter. À vérifier parcelle par parcelle : deux terrains voisins peuvent avoir des prix très différents selon leur statut juridique.</p>
+      </div>
     </div>
-    <div><h2>Le prix du terrain, région par région</h2></div>
-    <div>
-      <p class="shead__lead">Des ordres de grandeur observés sur le marché, utiles pour cadrer un budget avant même de visiter. À vérifier parcelle par parcelle : deux terrains voisins peuvent avoir des prix très différents selon leur statut juridique.</p>
-    </div>
-  </div>
     <div class="table-wrap" data-reveal>
       <table id="table-zones">
         <caption class="visually-hidden">Prix indicatif du terrain au mètre carré par zone</caption>
@@ -294,27 +288,24 @@
       </table>
     </div>
 
-    <div class="note" style="margin-top:2rem" data-reveal>
+    <div class="note" style="margin-top:1.4rem" data-reveal>
       <svg class="ico" aria-hidden="true"><use href="#i-alert"></use></svg>
       <p><strong>Un terrain bon marché coûte parfois très cher.</strong> Avant tout versement, faites vérifier le statut juridique de la parcelle et l'identité du vendeur. <a href="services.html#foncier">Voir comment nous procédons</a>.</p>
     </div>
   </div>
 </section>
 
-<!-- ====================== 06 · GUIDE ====================== -->
-<section class="section section--paper2">
+<!-- ====================== GUIDE ====================== -->
+<section class="section section--paper2" id="guide">
   <div class="container">
-  <div class="shead shead--split">
-    <div class="shead__top">
-      <span class="idx">06</span>
-      <span class="label">Le guide</span>
+    <div class="shead shead--split">
+      <div class="shead__top"><span class="label">Le guide</span></div>
+      <div><h2>Comprendre avant de s'engager</h2></div>
+      <div>
+        <p class="shead__lead">Ce que nous expliquons à chaque client lors du premier rendez-vous, écrit une bonne fois et en accès libre.</p>
+        <a class="alink" href="guide.html" style="margin-top:.6rem">Tous les articles <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+      </div>
     </div>
-    <div><h2>Comprendre avant de s'engager</h2></div>
-    <div>
-      <p class="shead__lead">Ce que nous expliquons à chaque client lors du premier rendez-vous, écrit une bonne fois et en accès libre.</p>
-      <div class="row" style="margin-top:1.6rem"><a class="alink" href="guide.html">Tous les articles <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a></div>
-    </div>
-  </div>
     <div class="entries">
       <a class="entry" href="article.html?id=statuts-terrain" data-reveal>
         <span class="entry__idx">01</span>

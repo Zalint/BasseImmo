@@ -1,27 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-label="Axonométrie du modèle Saloum">
-<defs><pattern id="sol" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v10" stroke="#A79C8D" stroke-width=".8" opacity=".5"/></pattern></defs>
-<rect width="900" height="700" fill="#FAF8F4"/>
-<path d="M418.39 237.33 L779.67 445.92 L481.61 618.0 L120.33 409.42 Z" fill="url(#sol)" stroke="#D8D0C4" stroke-width="1.3" stroke-linejoin="round"/>
-<path d="M228.72 409.42 L481.61 555.42 L481.61 490.76 L228.72 344.76 Z" fill="#E2D9CA" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M671.28 445.92 L481.61 555.42 L481.61 490.76 L671.28 381.26 Z" fill="#F0EAE0" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M418.39 235.25 L671.28 381.26 L481.61 490.76 L228.72 344.76 Z" fill="#FBF9F5" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/>
-<path d="M263.62 409.75 L294.98 427.86 L294.98 397.61 L263.62 379.51 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M314.2 438.95 L345.55 457.06 L345.55 426.81 L314.2 408.71 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M364.77 468.15 L396.13 486.26 L396.13 456.01 L364.77 437.91 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M415.35 497.36 L446.71 515.46 L446.71 485.22 L415.35 467.11 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M627.03 451.65 L589.09 473.56 L589.09 443.31 L627.03 421.41 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M563.8 488.16 L525.87 510.06 L525.87 479.81 L563.8 457.91 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M228.72 344.76 L481.61 490.76 L481.61 426.1 L228.72 280.09 Z" fill="#E2D9CA" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M671.28 381.26 L481.61 490.76 L481.61 426.1 L671.28 316.6 Z" fill="#F0EAE0" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/><path d="M418.39 170.59 L671.28 316.6 L481.61 426.1 L228.72 280.09 Z" fill="#FBF9F5" stroke="#1A1713" stroke-width="1.9" stroke-linejoin="round"/>
-<path d="M263.62 345.09 L294.98 363.19 L294.98 332.95 L263.62 314.84 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M314.2 374.29 L345.55 392.4 L345.55 362.15 L314.2 344.05 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M364.77 403.49 L396.13 421.6 L396.13 391.35 L364.77 373.25 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M415.35 432.69 L446.71 450.8 L446.71 420.55 L415.35 402.45 Z" fill="#D9CFBF" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M627.03 386.99 L589.09 408.89 L589.09 378.65 L627.03 356.75 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M563.8 423.5 L525.87 445.4 L525.87 415.15 L563.8 393.25 Z" fill="#CFC4B2" stroke="#1A1713" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M217.88 280.09 L481.61 432.36 L481.61 422.97 L217.88 270.71 Z" fill="#DED4C3" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/><path d="M682.12 316.6 L481.61 432.36 L481.61 422.97 L682.12 307.21 Z" fill="#EBE4D8" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/><path d="M418.39 154.94 L682.12 307.21 L481.61 422.97 L217.88 270.71 Z" fill="#F7F3EC" stroke="#1A1713" stroke-width="1.4" stroke-linejoin="round"/>
-<path d="M418.39 179.97 L638.77 307.21 L481.61 397.94 L261.23 270.71 Z" fill="none" stroke="#6E6459" stroke-width="1.1" stroke-linejoin="round"/>
-<path d="M261.23 270.71L481.61 397.94" stroke="#A79C8D" stroke-width="1" opacity=".5" stroke-dasharray="4 4"/>
-<path d="M174.53 440.7L427.42 586.71" stroke="#6E6459" stroke-width="1"/>
-<text x="300.97" y="533.71" text-anchor="middle" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="12" fill="#6E6459">14.0 m</text>
-<text x="34" y="46" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="13" font-weight="600" fill="#1A1713" letter-spacing=".16em">SALOUM</text>
-<text x="34" y="66" font-family="'IBM Plex Mono','SFMono-Regular',Menlo,monospace" font-size="11.5" fill="#6E6459" letter-spacing=".06em">AXONOMÉTRIE · DUPLEX + DEUX STUDIOS</text>
-<path d="M34 78h150" stroke="#D8D0C4" stroke-width="1"/>
+<defs><pattern id="sol" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v10" stroke="#9AA8C0" stroke-width=".8" opacity=".5"/></pattern></defs>
+<path d="M418.39 237.33 L779.67 445.92 L481.61 618.0 L120.33 409.42 Z" fill="url(#sol)" stroke="#D3DCEA" stroke-width="1.3" stroke-linejoin="round"/>
+<path d="M228.72 409.42 L481.61 555.42 L481.61 490.76 L228.72 344.76 Z" fill="#D8E2F3" stroke="#14213D" stroke-width="1.9" stroke-linejoin="round"/><path d="M671.28 445.92 L481.61 555.42 L481.61 490.76 L671.28 381.26 Z" fill="#EEF3FB" stroke="#14213D" stroke-width="1.9" stroke-linejoin="round"/><path d="M418.39 235.25 L671.28 381.26 L481.61 490.76 L228.72 344.76 Z" fill="#FFFFFF" stroke="#14213D" stroke-width="1.9" stroke-linejoin="round"/>
+<path d="M263.62 409.75 L294.98 427.86 L294.98 397.61 L263.62 379.51 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M314.2 438.95 L345.55 457.06 L345.55 426.81 L314.2 408.71 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M364.77 468.15 L396.13 486.26 L396.13 456.01 L364.77 437.91 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M415.35 497.36 L446.71 515.46 L446.71 485.22 L415.35 467.11 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M627.03 451.65 L589.09 473.56 L589.09 443.31 L627.03 421.41 Z" fill="#F5C46B" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M563.8 488.16 L525.87 510.06 L525.87 479.81 L563.8 457.91 Z" fill="#F5C46B" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M228.72 344.76 L481.61 490.76 L481.61 426.1 L228.72 280.09 Z" fill="#D8E2F3" stroke="#14213D" stroke-width="1.9" stroke-linejoin="round"/><path d="M671.28 381.26 L481.61 490.76 L481.61 426.1 L671.28 316.6 Z" fill="#EEF3FB" stroke="#14213D" stroke-width="1.9" stroke-linejoin="round"/><path d="M418.39 170.59 L671.28 316.6 L481.61 426.1 L228.72 280.09 Z" fill="#FFFFFF" stroke="#14213D" stroke-width="1.9" stroke-linejoin="round"/>
+<path d="M263.62 345.09 L294.98 363.19 L294.98 332.95 L263.62 314.84 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M314.2 374.29 L345.55 392.4 L345.55 362.15 L314.2 344.05 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M364.77 403.49 L396.13 421.6 L396.13 391.35 L364.77 373.25 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M415.35 432.69 L446.71 450.8 L446.71 420.55 L415.35 402.45 Z" fill="#BCD0FF" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M627.03 386.99 L589.09 408.89 L589.09 378.65 L627.03 356.75 Z" fill="#F5C46B" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M563.8 423.5 L525.87 445.4 L525.87 415.15 L563.8 393.25 Z" fill="#F5C46B" stroke="#14213D" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M217.88 280.09 L481.61 432.36 L481.61 422.97 L217.88 270.71 Z" fill="#D0DBEE" stroke="#14213D" stroke-width="1.4" stroke-linejoin="round"/><path d="M682.12 316.6 L481.61 432.36 L481.61 422.97 L682.12 307.21 Z" fill="#E3EAF6" stroke="#14213D" stroke-width="1.4" stroke-linejoin="round"/><path d="M418.39 154.94 L682.12 307.21 L481.61 422.97 L217.88 270.71 Z" fill="#F4F7FC" stroke="#14213D" stroke-width="1.4" stroke-linejoin="round"/>
+<path d="M418.39 179.97 L638.77 307.21 L481.61 397.94 L261.23 270.71 Z" fill="none" stroke="#5E6B82" stroke-width="1.1" stroke-linejoin="round"/>
+<path d="M261.23 270.71L481.61 397.94" stroke="#9AA8C0" stroke-width="1" opacity=".5" stroke-dasharray="4 4"/>
+<path d="M174.53 440.7L427.42 586.71" stroke="#5E6B82" stroke-width="1"/>
+<text x="300.97" y="533.71" text-anchor="middle" font-family="Figtree,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#5E6B82">14.0 m</text>
+<text x="34" y="46" font-family="Figtree,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#14213D" letter-spacing=".16em">SALOUM</text>
+<text x="34" y="66" font-family="Figtree,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" fill="#5E6B82" letter-spacing=".06em">AXONOMÉTRIE · DUPLEX + DEUX STUDIOS</text>
+<path d="M34 78h150" stroke="#D3DCEA" stroke-width="1"/>
 </svg>
